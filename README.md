@@ -1,16 +1,15 @@
-# RISC-V Project Template
+# RISC-V Projectのテンプレート(及び和訳、解説)
 
-This is a starter template for your custom RISC-V project. It will allow you
-to leverage the Chisel HDL and RocketChip SoC generator to produce a
-RISC-V SoC with MMIO-mapped peripherals, DMA, and custom accelerators.
+本リポジトリは、初心者が、RISC-Vをカスタマイズしようとするプロジェクトのための、テンプレートです。
+これは、あなたが、Chisel HDLとRocketChip SoC generatorを利用して、メモリ・マップドIO周辺機器や、DMAや独自アクセラレータを追加したRISC-V SoCを生成するのを手助けします。
 
-## Getting started
+## はじめに
 
-### Checking out the sources
+### ソースのチェックアウト
 
-After cloning this repo, you will need to initialize all of the submodules
+本リポジトリをクローンして、全てのサブモジュールを初期化する必要があります。
 
-    git clone https://github.com/ucb-bar/project-template.git
+    git clone https://github.com/horie-t/project-template.git
     cd project-template
     git submodule update --init --recursive
 
