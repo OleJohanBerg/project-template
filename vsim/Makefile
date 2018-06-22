@@ -1,9 +1,13 @@
 base_dir=$(abspath ..)
 sim_dir=$(abspath .)
 
+# TopモジュールのScalaのパッケージ 
 PROJECT ?= example
+# TopモジュールのScalaクラス名(ChilseのDriverが、PROJCT.MODELの完全名でアクセスする)
 MODEL ?= TestHarness
+# Topモジュールのインスタンス化する時の引数(freechips.rocketchip.config.Parametersの派生クラス)
 CONFIG ?= DefaultExampleConfig
+# CONFIGで指定したクラスのパッケージ名
 CFG_PROJECT ?= $(PROJECT)
 TB ?= TestDriver
 
@@ -48,6 +52,7 @@ VCS_OPTS = -notice -line +lint=all,noVCDE,noONGS,noUI -error=PCWM-L -timescale=1
 	+define+RANDOMIZE_INVALID_ASSIGN \
 	+libext+.v \
 
+# Verilogファイルを生成する
 verilog: $(sim_vsrcs)
 
 $(simv): $(sim_vsrcs) $(sim_csrcs)
