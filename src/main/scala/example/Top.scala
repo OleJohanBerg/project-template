@@ -25,20 +25,3 @@ class ExampleTopModule[+L <: ExampleTop](l: L) extends RocketSubsystemModuleImp(
     with HasNoDebugModuleImp
     with HasPeripherySerialModuleImp
     with DontTouch
-
-class ExampleTopWithPWM(implicit p: Parameters) extends ExampleTop
-    with HasPeripheryPWM {
-  override lazy val module = new ExampleTopWithPWMModule(this)
-}
-
-class ExampleTopWithPWMModule(l: ExampleTopWithPWM)
-  extends ExampleTopModule(l) with HasPeripheryPWMModuleImp
-
-class ExampleTopWithBlockDevice(implicit p: Parameters) extends ExampleTop
-    with HasPeripheryBlockDevice {
-  override lazy val module = new ExampleTopWithBlockDeviceModule(this)
-}
-
-class ExampleTopWithBlockDeviceModule(l: ExampleTopWithBlockDevice)
-  extends ExampleTopModule(l)
-  with HasPeripheryBlockDeviceModuleImp
