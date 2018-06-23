@@ -11,8 +11,7 @@ class ExampleTop(implicit p: Parameters) extends RocketSubsystem
     with CanHaveMasterAXI4MemPort
     with HasPeripheryBootROM
     with HasSystemErrorSlave
-    with HasSyncExtInterrupts
-    with HasNoDebug {
+    with HasSyncExtInterrupts {
   override lazy val module = new ExampleTopModule(this)
 }
 
@@ -21,4 +20,3 @@ class ExampleTopModule[+L <: ExampleTop](l: L) extends RocketSubsystemModuleImp(
     with CanHaveMasterAXI4MemPortModuleImp
     with HasPeripheryBootROMModuleImp
     with HasExtInterruptsModuleImp
-    with HasNoDebugModuleImp
