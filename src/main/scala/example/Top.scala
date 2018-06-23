@@ -15,7 +15,6 @@ class ExampleTop(implicit p: Parameters) extends RocketSubsystem
 }
 
 class ExampleTopModule[+L <: ExampleTop](l: L) extends RocketSubsystemModuleImp(l)
-    with HasRTCModuleImp
     with CanHaveMasterAXI4MemPortModuleImp
     with HasPeripheryBootROMModuleImp
     with HasExtInterruptsModuleImp
