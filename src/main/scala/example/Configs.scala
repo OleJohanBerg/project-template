@@ -26,7 +26,7 @@ class WithExampleTop extends Config((site, here, up) => {
 
 class BaseExampleConfig extends Config(
   new WithBootROM ++
-  new freechips.rocketchip.system.DefaultConfig)
+  new freechips.rocketchip.system.TinyConfig)
 
 class DefaultExampleConfig extends Config(
   new WithExampleTop ++ new BaseExampleConfig)
