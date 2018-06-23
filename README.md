@@ -71,16 +71,10 @@ By passing the +blkdev argument on the simulator command line, you can allow
 the RTL simulation to read and write from a file. Take a look at tests/blkdev.c
 for an example of how Rocket can program the block device controller.
 
-## Adding an MMIO peripheral
+## MMIO周辺機器の追加
 
-You can RocketChip to create your own memory-mapped IO device and add it into
-the SoC design. The easiest way to create a TileLink peripheral is to use the
-TLRegisterRouter, which abstracts away the details of handling the TileLink
-protocol and provides a convenient interface for specifying memory-mapped
-registers. To create a RegisterRouter-based peripheral, you will need to
-specify a parameter case class for the configuration settings, a bundle trait
-with the extra top-level ports, and a module implementation containing the
-actual RTL.
+RocketChip向けに、独自のメモリ・マップド・IO機器を作成して、Socの設計に追加する事ができます。
+最も簡単な作成方法は、TileLink向けの周辺機器を作成し、 TLRegisterRouter を使う事です。 TLRegisterRouter は TileLink プロトコルを扱うための詳細を抽象化し、メモリ・マップされたレジスタのための、簡単なインターフェイスを提供します。 RegisterRouterベースの周辺機器を作成するには、コンフィグレーションの設定のパラメータCaseクラスを指定し、追加のトップレベルのポートのtraitのバンドルをwithで指定し、実際のRTLを含むモジュールの実装を指定します。
 
 ```scala
     case class PWMParams(address: BigInt, beatBytes: Int)
@@ -111,14 +105,10 @@ actual RTL.
     }
 ```
 
-Once you have these classes, you can construct the final peripheral by
-extending the TLRegisterRouter and passing the proper arguments. The first
-set of arguments determines where the register router will be placed in the
-global address map and what information will be put in its device tree entry.
-The second set of arguments is the IO bundle constructor, which we create
-by extending TLRegBundle with our bundle trait. The final set of arguments
-is the module constructor, which we create by extends TLRegModule with our
-module trait.
+これらのクラスが出来たら、TLRegisterRouter を継承し、TLRegisterRouterに引数を渡す事により、周辺機器を構築できます。
+最初の引数は、RegisterRouterがグローバルアドレスマップの中のどこに配置すればよいかと、デバイス・ツリーのエントリに追加する時の情報です。
+二番目の引数は、IOバンドルのコンストラクタ(追加したいバンドルtraitでTLRegBundleを拡張します)です。
+最後の引数は、モジュールのコンストラクタ(追加したいモジュールtraitでTLRegModuleを拡張します)です。
 
 ```scala
     class PWMTL(c: PWMParams)(implicit p: Parameters)
@@ -129,7 +119,7 @@ module trait.
           new TLRegModule(c, _, _) with PWMTLModule)
 ```
 
-The full module code with comments can be found in src/main/scala/example/PWM.scala.
+コメント付きの全部のモジュールのコードは src/main/scala/example/PWM.scala にあります。
 
 After creating the module, we need to hook it up to our SoC. Rocketchip
 accomplishes this using the [cake pattern](http://www.cakesolutions.net/teamblogs/2011/12/19/cake-pattern-in-depth).
