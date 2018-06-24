@@ -2,11 +2,11 @@ base_dir=$(abspath ..)
 sim_dir=$(abspath .)
 
 # TopモジュールのScalaのパッケージ 
-PROJECT ?= example
+PROJECT ?= lance
 # TopモジュールのScalaクラス名(ChilseのDriverが、PROJCT.MODELの完全名でアクセスする)
-MODEL ?= TestHarness
+MODEL ?= TinyLanceTestHarness
 # Topモジュールのインスタンス化する時の引数(freechips.rocketchip.config.Parametersの派生クラス)
-CONFIG ?= DefaultExampleConfig
+CONFIG ?= TinyLanceConfig
 # CONFIGで指定したクラスのパッケージ名
 CFG_PROJECT ?= $(PROJECT)
 TB ?= TestDriver
