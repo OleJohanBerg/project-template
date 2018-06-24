@@ -1,0 +1,88 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 09:07:18 2018
+# Process ID: 4970
+# Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj
+# Command line: vivado
+# Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.log
+# Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project pico_rocket . -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+add_files -norecurse /home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/example.TestHarness.DefaultExampleConfig.v
+update_compile_order -fileset sources_1
+add_files -norecurse {/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v /home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v}
+update_compile_order -fileset sources_1
+file mkdir /home/tetsuya/fpga/rocket-chip-template/vprj/pico_rocket.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/tetsuya/fpga/rocket-chip-template/vprj/pico_rocket.srcs/sim_1/new/DefaultExampleTestbench.sv w ]
+add_files -fileset sim_1 /home/tetsuya/fpga/rocket-chip-template/vprj/pico_rocket.srcs/sim_1/new/DefaultExampleTestbench.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source DefaultExampleTestbench.tcl
+current_wave_config {Untitled 1}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/tile/core/ibuf_io_pc}} 
+current_wave_config {Untitled 1}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/tile/core/ibuf_io_inst_0_bits_raw}} 
+relaunch_sim
+relaunch_sim
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+relaunch_sim
+current_wave_config {Untitled 1*}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/bootrom/auto_in_a_bits_address}} 
+relaunch_sim
+current_wave_config {Untitled 1*}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/bootrom/auto_in_d_bits_data}} 
+relaunch_sim
+current_wave_config {Untitled 1*}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/tile/core/ex_reg_inst}} 
+current_wave_config {Untitled 1*}
+add_wave {{/DefaultExampleTestbench/dut/TestHarness/tile/core/ex_reg_raw_inst}} 
+relaunch_sim
+close_sim
