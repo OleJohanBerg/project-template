@@ -15,7 +15,7 @@ class TinyLanceTestHarness(implicit val p: Parameters) extends Module {
   val dut = p(BuildTop)(clock, reset.toBool, p)
   dut.debug := DontCare
   dut.tieOffInterrupts()
-  io.led := true.B
+  io.led := dut.led
 }
 
 object Generator extends GeneratorApp {

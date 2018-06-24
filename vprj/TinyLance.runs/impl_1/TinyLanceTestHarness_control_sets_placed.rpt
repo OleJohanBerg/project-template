@@ -1,0 +1,191 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Sun Jun 24 17:04:52 2018
+| Host         : palladium running 64-bit Ubuntu 18.04 LTS
+| Command      : report_control_sets -verbose -file TinyLanceTestHarness_control_sets_placed.rpt
+| Design       : TinyLanceTestHarness
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   119 |
+| Unused register locations in slices containing registers |   298 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      2 |            1 |
+|      4 |           15 |
+|      5 |            4 |
+|      6 |            8 |
+|      8 |           20 |
+|     11 |            1 |
+|     12 |            1 |
+|    16+ |           66 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             196 |          111 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |              99 |           67 |
+| Yes          | No                    | No                     |            1988 |          755 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             465 |          162 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|   Clock Signal   |                                        Enable Signal                                        |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/atomics/_T_261_0_state                                   | TestHarness/pbus/coupler_from_sbus/atomics/_T_272_0_lut[3]    |                1 |              1 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/icache/s1_valid                                                   |                                                               |                1 |              1 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/_T_755                    | reset_IBUF                                                    |                1 |              1 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_led/fragmenter/Repeater/_T_291                      | reset_IBUF                                                    |                1 |              2 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/_T_381_reg[0]                                                         | TestHarness/tile/fragmenter_1/Repeater/acq_mask_reg[3]        |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/dtim_adapter/_T_284                                                        | reset_IBUF                                                    |                2 |              4 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/E[0]                                        | TestHarness/plic/Queue/ram_mask[3]_i_1_n_0                    |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/E[0]                                        | reset_IBUF                                                    |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/pbus/sync_xing/Queue_1/_T_1070_reg[0]_2                                         | TestHarness/pbus/coupler_from_sbus/atomics/_T_1070[3]_i_1_n_0 |                2 |              4 |
+|  clock_IBUF_BUFG | TestHarness/pbus/sync_xing/Queue_1/_T_370_reg[0][0]                                         | TestHarness/pbus/sync_xing/Queue_1/_T_370_reg[0]_0[0]         |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/_T_381_reg[0]                                                         | reset_IBUF                                                    |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue_1/E[0]                                                     | reset_IBUF                                                    |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue_1/_T_2706_reg[3]_0[0]                                      | reset_IBUF                                                    |                2 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/ibuf/ex_reg_rs_lsb_0_reg[0][0]                                        | TestHarness/tile/core/ibuf/SR[0]                              |                1 |              4 |
+|  clock_IBUF_BUFG | TestHarness/pbus/periphery_bus_xbar/E[0]                                                    | reset_IBUF                                                    |                2 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue/_T_342_reg[3]_1[0]                                         | TestHarness/tile/sync_xing/Queue/_T_342_reg[3]_0[0]           |                2 |              4 |
+|  clock_IBUF_BUFG |                                                                                             | TestHarness/tile/sync_xing/Queue/_T_465_reg[3][0]             |                3 |              4 |
+|  clock_IBUF_BUFG |                                                                                             | TestHarness/pbus/sync_xing/Queue_1/_T_630_reg[3][0]           |                2 |              4 |
+|  clock_IBUF_BUFG |                                                                                             | TestHarness/pbus/coupler_from_sbus/atomics/_T_883[3]_i_1_n_0  |                2 |              4 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_bp_0_control_dmode                                            | reset_IBUF                                                    |                3 |              5 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/s1_valid_not_nacked                                                 | TestHarness/tile/sync_xing/Queue_1/s2_req_cmd_reg[4][0]       |                1 |              5 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_mcause[31]_i_1_n_0                                            |                                                               |                2 |              5 |
+|  clock_IBUF_BUFG |                                                                                             | TestHarness/tile/core/fq_reset                                |                3 |              5 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/s1_valid_not_nacked                                                 |                                                               |                4 |              6 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_287[5]_i_1_n_0                                                 | reset_IBUF                                                    |                3 |              6 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/_T_2641_reg[5][0]                           | reset_IBUF                                                    |                3 |              6 |
+|  clock_IBUF_BUFG | TestHarness/tile/dtim_adapter/s1_req_tag_reg[2][0]                                          | TestHarness/tile/core/s1_req_tag_reg[2]                       |                1 |              6 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_274[5]_i_1_n_0                                                 | reset_IBUF                                                    |                4 |              6 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/div/count[5]_i_1_n_0                                                  | TestHarness/tile/core/div/_T_199                              |                2 |              6 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/div/_T_199                                                            |                                                               |                5 |              6 |
+|  clock_IBUF_BUFG | TestHarness/pbus/periphery_bus_xbar/_T_2625__2                                              | reset_IBUF                                                    |                3 |              6 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][7]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][6]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][5]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][4]      |                                                               |                1 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][5]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][4]          | reset_IBUF                                                    |                3 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][3]          | reset_IBUF                                                    |                3 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][2]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][1]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][0]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][2]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][0]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][1]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][6]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/timecmp_0_reg[60][3]      |                                                               |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/time$_reg[60][7]          | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/_T_426_1                                    | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/_T_426_0                                    | reset_IBUF                                                    |                3 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/_T_307                                      | reset_IBUF                                                    |                3 |              8 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/_T_426                                      | reset_IBUF                                                    |                2 |              8 |
+|  clock_IBUF_BUFG | TestHarness/tile/tlMasterXbar/uncachedReqs_0_addr_reg[1]_0[0]                               |                                                               |                4 |             11 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue_1/_GEN_23                                                  |                                                               |                6 |             12 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue_1/s1_valid_reg                                             |                                                               |                7 |             16 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_led/fragmenter/Repeater/_T_24                       |                                                               |                7 |             18 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/saved_opcode_reg[2]_0[0]                    |                                                               |               10 |             18 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/saved_size_reg[2]_0[0]                      |                                                               |                9 |             19 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_clint/fragmenter/Repeater/_T_24                     |                                                               |                7 |             22 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/ibuf/ex_reg_rs_lsb_0_reg[0][0]                                        |                                                               |                5 |             25 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_278[25]_i_1_n_0                                                | reset_IBUF                                                    |                6 |             26 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/icache/_T_171                                                     |                                                               |                7 |             26 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_291[25]_i_1_n_0                                                | reset_IBUF                                                    |                7 |             26 |
+|  clock_IBUF_BUFG | TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/ram_error_reg_0_1_0_0_i_1__2_n_0 |                                                               |                4 |             28 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/s2_pc_reg[1]                                                   | reset_IBUF                                                    |               14 |             29 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_2_addr[29]_i_1_n_0                                        |                                                               |               17 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_3_addr[29]_i_1_n_0                                        |                                                               |               15 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_4_addr[29]_i_1_n_0                                        |                                                               |               14 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_5_addr[29]_i_1_n_0                                        |                                                               |               16 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_1[0]                                   |                                                               |               11 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_6_addr[29]_i_1_n_0                                        |                                                               |               17 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_7_addr[29]_i_1_n_0                                        |                                                               |               14 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/ibuf/ex_reg_rs_msb_1_reg[0][0]                                        |                                                               |                6 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_0_addr[29]_i_1_n_0                                        |                                                               |               15 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_pmp_1_addr[29]_i_1_n_0                                        |                                                               |               14 |             30 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_mepc[31]_i_1_n_0                                              |                                                               |                9 |             31 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_mtvec                                                         | reset_IBUF                                                    |               18 |             31 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/_T_2206_reg[1][0]                                                   | reset_IBUF                                                    |               11 |             31 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_dpc[31]_i_1_n_0                                               |                                                               |               10 |             31 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_to_slave_named_plic/fragmenter/Repeater/_T_24                      |                                                               |                9 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_mscratch                                                      |                                                               |               27 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_mbadaddr[31]_i_1_n_0                                          |                                                               |               17 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_dscratch[31]_i_1_n_0                                          |                                                               |               24 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_278[57]_i_1_n_0                                                | reset_IBUF                                                    |                7 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/reg_bp_0_address                                                  |                                                               |               15 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/csr/_T_291[57]_i_1_n_0                                                | reset_IBUF                                                    |                7 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/mem_reg_rs2[31]_i_1_n_0                                               |                                                               |                8 |             32 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/_T_693                                                              |                                                               |               17 |             32 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue_1/_T_279_0_error_reg[0]                     |                                                               |               12 |             33 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/div/divisor[32]_i_1_n_0                                               |                                                               |               11 |             33 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue/E[0]                                        |                                                               |                8 |             36 |
+|  clock_IBUF_BUFG | TestHarness/tile/dtim_adapter/s1_req_tag_reg[2][0]                                          |                                                               |               12 |             40 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/s2_req_typ                                                          |                                                               |               19 |             41 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing_1/Queue/saved_address_reg[0][0]                                  |                                                               |               14 |             43 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/_T_381_reg[0]                                                         |                                                               |               15 |             47 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/advance_pstore1                                                     |                                                               |               31 |             48 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/buf__pc_reg[31]_4[0]                                           |                                                               |               14 |             49 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/_T_1345                                                             |                                                               |               16 |             53 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/ibuf/ex_cause_reg[0][0]                                               |                                                               |               14 |             61 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing/Queue_1/vb_array_reg[0]                                          | TestHarness/tile/core/vb_array_reg[0][0]                      |               24 |             64 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/_T_189                                                         |                                                               |               15 |             65 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/_T_168                                                         |                                                               |               11 |             65 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/_T_104                                                         |                                                               |               13 |             65 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/_T_147                                                         |                                                               |               10 |             65 |
+|  clock_IBUF_BUFG | TestHarness/tile/frontend/fq/_T_126                                                         |                                                               |               12 |             65 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/div/remainder[65]_i_1_n_0                                             |                                                               |               38 |             66 |
+|  clock_IBUF_BUFG | TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/_T_630_reg[1]                    |                                                               |                9 |             68 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue_1/value_reg_1                               |                                                               |                9 |             70 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing_1/Queue_1/ram_opcode_reg_0_1_0_2_i_1__6_n_0                      |                                                               |                9 |             70 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/buffer/Queue_1/p_1_in                                    |                                                               |                9 |             70 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/atomics/_T_261_0_state                                   |                                                               |               42 |             80 |
+|  clock_IBUF_BUFG |                                                                                             | reset_IBUF                                                    |               59 |             84 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/mem_pc_valid                                                          |                                                               |               31 |             92 |
+|  clock_IBUF_BUFG | TestHarness/tile/dcache/ex_reg_rs_msb_1_reg[0]_0                                            |                                                               |               12 |             96 |
+|  clock_IBUF_BUFG | TestHarness/tile/core/mem_ctrl_fp                                                           |                                                               |               53 |            106 |
+|  clock_IBUF_BUFG | TestHarness/tile/tlMasterXbar/_T_1065_reg[2]_0                                              |                                                               |               17 |            130 |
+|  clock_IBUF_BUFG | TestHarness/pbus/coupler_from_sbus/atomics/_T_883_reg[1]_0                                  |                                                               |               17 |            132 |
+|  clock_IBUF_BUFG | TestHarness/tile/sync_xing_1/Queue/ram_opcode_reg_0_1_0_2_i_1__0_n_0                        |                                                               |               17 |            132 |
+|  clock_IBUF_BUFG | TestHarness/pbus/sync_xing/Queue/_T_272_0_bits_data_reg[1]                                  |                                                               |               17 |            132 |
+|  clock_IBUF_BUFG |                                                                                             |                                                               |              111 |            196 |
++------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,1524 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Sun Jun 24 17:06:26 2018
+| Host         : palladium running 64-bit Ubuntu 18.04 LTS
+| Command      : report_timing_summary -max_paths 10 -file TinyLanceTestHarness_timing_summary_routed.rpt -pb TinyLanceTestHarness_timing_summary_routed.pb -rpx TinyLanceTestHarness_timing_summary_routed.rpx -warn_on_violation
+| Design       : TinyLanceTestHarness
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.21 2018-02-08
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -2.424    -1250.958                    919                 8437        0.048        0.000                      0                 8437        3.750        0.000                       0                  3691  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -2.424    -1250.958                    919                 8437        0.048        0.000                      0                 8437        3.750        0.000                       0                  3691  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :          919  Failing Endpoints,  Worst Slack       -2.424ns,  Total Violation    -1250.958ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.048ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -2.424ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[12]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.099ns  (logic 2.478ns (20.481%)  route 9.621ns (79.519%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.084ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.112ns = ( 15.112 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.738    17.563    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.690    15.112    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[12]/C
+                         clock pessimism              0.267    15.380    
+                         clock uncertainty           -0.035    15.344    
+    SLICE_X19Y47         FDRE (Setup_fdre_C_CE)      -0.205    15.139    TestHarness/tile/core/ex_reg_rs_msb_0_reg[12]
+  -------------------------------------------------------------------
+                         required time                         15.139    
+                         arrival time                         -17.563    
+  -------------------------------------------------------------------
+                         slack                                 -2.424    
+
+Slack (VIOLATED) :        -2.424ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[13]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.099ns  (logic 2.478ns (20.481%)  route 9.621ns (79.519%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.084ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.112ns = ( 15.112 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.738    17.563    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.690    15.112    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[13]/C
+                         clock pessimism              0.267    15.380    
+                         clock uncertainty           -0.035    15.344    
+    SLICE_X19Y47         FDRE (Setup_fdre_C_CE)      -0.205    15.139    TestHarness/tile/core/ex_reg_rs_msb_0_reg[13]
+  -------------------------------------------------------------------
+                         required time                         15.139    
+                         arrival time                         -17.563    
+  -------------------------------------------------------------------
+                         slack                                 -2.424    
+
+Slack (VIOLATED) :        -2.424ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[26]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.099ns  (logic 2.478ns (20.481%)  route 9.621ns (79.519%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.084ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.112ns = ( 15.112 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.738    17.563    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.690    15.112    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X19Y47         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[26]/C
+                         clock pessimism              0.267    15.380    
+                         clock uncertainty           -0.035    15.344    
+    SLICE_X19Y47         FDRE (Setup_fdre_C_CE)      -0.205    15.139    TestHarness/tile/core/ex_reg_rs_msb_0_reg[26]
+  -------------------------------------------------------------------
+                         required time                         15.139    
+                         arrival time                         -17.563    
+  -------------------------------------------------------------------
+                         slack                                 -2.424    
+
+Slack (VIOLATED) :        -2.417ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[14]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.091ns  (logic 2.478ns (20.495%)  route 9.613ns (79.505%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.730    17.555    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[14]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[14]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y46         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[14]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.555    
+  -------------------------------------------------------------------
+                         slack                                 -2.417    
+
+Slack (VIOLATED) :        -2.417ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[15]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.091ns  (logic 2.478ns (20.495%)  route 9.613ns (79.505%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.730    17.555    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[15]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[15]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y46         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[15]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.555    
+  -------------------------------------------------------------------
+                         slack                                 -2.417    
+
+Slack (VIOLATED) :        -2.417ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[20]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.091ns  (logic 2.478ns (20.495%)  route 9.613ns (79.505%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.730    17.555    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[20]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[20]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y46         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[20]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.555    
+  -------------------------------------------------------------------
+                         slack                                 -2.417    
+
+Slack (VIOLATED) :        -2.417ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[22]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.091ns  (logic 2.478ns (20.495%)  route 9.613ns (79.505%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.730    17.555    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[22]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y46         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[22]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y46         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[22]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.555    
+  -------------------------------------------------------------------
+                         slack                                 -2.417    
+
+Slack (VIOLATED) :        -2.377ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.052ns  (logic 2.478ns (20.562%)  route 9.574ns (79.438%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.690    17.516    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[0]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y45         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.516    
+  -------------------------------------------------------------------
+                         slack                                 -2.377    
+
+Slack (VIOLATED) :        -2.377ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[24]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.052ns  (logic 2.478ns (20.562%)  route 9.574ns (79.438%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.690    17.516    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[24]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[24]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y45         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[24]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.516    
+  -------------------------------------------------------------------
+                         slack                                 -2.377    
+
+Slack (VIOLATED) :        -2.377ns  (required time - arrival time)
+  Source:                 TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/ex_reg_rs_msb_0_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        12.052ns  (logic 2.478ns (20.562%)  route 9.574ns (79.438%))
+  Logic Levels:           11  (LUT2=1 LUT3=1 LUT4=1 LUT5=4 LUT6=4)
+  Clock Path Skew:        -0.085ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.111ns = ( 15.111 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.464ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.862     5.464    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB36_X0Y8          RAMB36E1                                     r  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y8          RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[13])
+                                                      0.882     6.346 f  TestHarness/tile/frontend/icache/data_arrays_0_0_reg/DOBDO[13]
+                         net (fo=8, routed)           1.209     7.555    TestHarness/tile/frontend/fq/DOBDO[13]
+    SLICE_X10Y42         LUT3 (Prop_lut3_I2_O)        0.124     7.679 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_13/O
+                         net (fo=1, routed)           0.466     8.145    TestHarness/tile/frontend/fq/frontend_io_cpu_resp_bits_data[13]
+    SLICE_X12Y41         LUT5 (Prop_lut5_I4_O)        0.124     8.269 f  TestHarness/tile/frontend/fq/ex_reg_inst[31]_i_5/O
+                         net (fo=91, routed)          0.725     8.994    TestHarness/tile/frontend/fq/core/ibuf_io_inst_0_bits_raw[13]
+    SLICE_X13Y40         LUT2 (Prop_lut2_I1_O)        0.153     9.147 r  TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2/O
+                         net (fo=17, routed)          1.250    10.397    TestHarness/tile/frontend/fq/ex_reg_inst[30]_i_2_n_0
+    SLICE_X17Y35         LUT6 (Prop_lut6_I0_O)        0.327    10.724 f  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3/O
+                         net (fo=1, routed)           0.728    11.452    TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_3_n_0
+    SLICE_X18Y37         LUT6 (Prop_lut6_I3_O)        0.124    11.576 r  TestHarness/tile/frontend/fq/ex_reg_inst[9]_i_1/O
+                         net (fo=2, routed)           0.648    12.224    TestHarness/tile/frontend/fq/ex_reg_inst_reg[23][1]
+    SLICE_X18Y38         LUT4 (Prop_lut4_I2_O)        0.124    12.348 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39/O
+                         net (fo=1, routed)           0.884    13.232    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_39_n_0
+    SLICE_X18Y43         LUT5 (Prop_lut5_I0_O)        0.124    13.356 r  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17/O
+                         net (fo=4, routed)           0.673    14.029    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_17_n_0
+    SLICE_X19Y43         LUT5 (Prop_lut5_I4_O)        0.124    14.153 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21/O
+                         net (fo=3, routed)           0.808    14.961    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_21_n_0
+    SLICE_X19Y46         LUT6 (Prop_lut6_I1_O)        0.124    15.085 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7/O
+                         net (fo=2, routed)           0.810    15.895    TestHarness/tile/frontend/fq/ex_reg_xcpt_i_7_n_0
+    SLICE_X19Y45         LUT6 (Prop_lut6_I2_O)        0.124    16.019 f  TestHarness/tile/frontend/fq/ex_reg_xcpt_i_4/O
+                         net (fo=36, routed)          0.682    16.701    TestHarness/tile/frontend/fq/ex_reg_rs_msb_0_reg[29]_0
+    SLICE_X18Y44         LUT5 (Prop_lut5_I4_O)        0.124    16.825 r  TestHarness/tile/frontend/fq/ex_reg_rs_msb_0[29]_i_1/O
+                         net (fo=30, routed)          0.690    17.516    TestHarness/tile/core/nBufValid_reg[0]
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        1.689    15.111    TestHarness/tile/core/clock_IBUF_BUFG
+    SLICE_X17Y45         FDRE                                         r  TestHarness/tile/core/ex_reg_rs_msb_0_reg[2]/C
+                         clock pessimism              0.267    15.379    
+                         clock uncertainty           -0.035    15.343    
+    SLICE_X17Y45         FDRE (Setup_fdre_C_CE)      -0.205    15.138    TestHarness/tile/core/ex_reg_rs_msb_0_reg[2]
+  -------------------------------------------------------------------
+                         required time                         15.138    
+                         arrival time                         -17.516    
+  -------------------------------------------------------------------
+                         slack                                 -2.377    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.048ns  (arrival time - required time)
+  Source:                 TestHarness/sbus/coupler_from_tile_named_tile/cork/_T_738_2_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.401ns  (logic 0.209ns (52.158%)  route 0.192ns (47.842%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.058ns
+    Source Clock Delay      (SCD):    1.542ns
+    Clock Pessimism Removal (CPR):    0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.622     1.542    TestHarness/sbus/coupler_from_tile_named_tile/cork/clock_IBUF_BUFG
+    SLICE_X50Y29         FDRE                                         r  TestHarness/sbus/coupler_from_tile_named_tile/cork/_T_738_2_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y29         FDRE (Prop_fdre_C_Q)         0.164     1.706 r  TestHarness/sbus/coupler_from_tile_named_tile/cork/_T_738_2_reg/Q
+                         net (fo=4, routed)           0.192     1.898    TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/_T_738_2
+    SLICE_X52Y29         LUT6 (Prop_lut6_I1_O)        0.045     1.943 r  TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_i_1__3/O
+                         net (fo=1, routed)           0.000     1.943    TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_i_1__3_n_0
+    SLICE_X52Y29         FDRE                                         r  TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.893     2.058    TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/clock_IBUF_BUFG
+    SLICE_X52Y29         FDRE                                         r  TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_reg/C
+                         clock pessimism             -0.254     1.804    
+    SLICE_X52Y29         FDRE (Hold_fdre_C_D)         0.091     1.895    TestHarness/sbus/coupler_from_tile_named_tile/cork/Queue_1/value_1_reg
+  -------------------------------------------------------------------
+                         required time                         -1.895    
+                         arrival time                           1.943    
+  -------------------------------------------------------------------
+                         slack                                  0.048    
+
+Slack (MET) :             0.057ns  (arrival time - required time)
+  Source:                 TestHarness/tile/core/div/remainder_reg[44]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/div/remainder_reg[45]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.348ns  (logic 0.209ns (60.097%)  route 0.139ns (39.903%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.199ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.040ns
+    Source Clock Delay      (SCD):    1.590ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.670     1.590    TestHarness/tile/core/div/clock_IBUF_BUFG
+    SLICE_X6Y49          FDRE                                         r  TestHarness/tile/core/div/remainder_reg[44]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y49          FDRE (Prop_fdre_C_Q)         0.164     1.754 r  TestHarness/tile/core/div/remainder_reg[44]/Q
+                         net (fo=6, routed)           0.139     1.893    TestHarness/tile/core/div/_GEN_36[11]
+    SLICE_X5Y50          LUT6 (Prop_lut6_I3_O)        0.045     1.938 r  TestHarness/tile/core/div/remainder[45]_i_1/O
+                         net (fo=1, routed)           0.000     1.938    TestHarness/tile/core/div/remainder[45]_i_1_n_0
+    SLICE_X5Y50          FDRE                                         r  TestHarness/tile/core/div/remainder_reg[45]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.875     2.040    TestHarness/tile/core/div/clock_IBUF_BUFG
+    SLICE_X5Y50          FDRE                                         r  TestHarness/tile/core/div/remainder_reg[45]/C
+                         clock pessimism             -0.250     1.789    
+    SLICE_X5Y50          FDRE (Hold_fdre_C_D)         0.091     1.880    TestHarness/tile/core/div/remainder_reg[45]
+  -------------------------------------------------------------------
+                         required time                         -1.880    
+                         arrival time                           1.938    
+  -------------------------------------------------------------------
+                         slack                                  0.057    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 TestHarness/tile/core/div/remainder_reg[32]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/core/div/remainder_reg[33]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.524ns  (logic 0.209ns (39.866%)  route 0.315ns (60.134%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.366ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.112ns
+    Source Clock Delay      (SCD):    1.495ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.576     1.495    TestHarness/tile/core/div/clock_IBUF_BUFG
+    SLICE_X10Y51         FDRE                                         r  TestHarness/tile/core/div/remainder_reg[32]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y51         FDRE (Prop_fdre_C_Q)         0.164     1.659 r  TestHarness/tile/core/div/remainder_reg[32]/Q
+                         net (fo=3, routed)           0.315     1.975    TestHarness/tile/core/div/remainder_reg_n_0_[32]
+    SLICE_X7Y48          LUT6 (Prop_lut6_I3_O)        0.045     2.020 r  TestHarness/tile/core/div/remainder[33]_i_1/O
+                         net (fo=1, routed)           0.000     2.020    TestHarness/tile/core/div/remainder[33]_i_1_n_0
+    SLICE_X7Y48          FDRE                                         r  TestHarness/tile/core/div/remainder_reg[33]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.947     2.112    TestHarness/tile/core/div/clock_IBUF_BUFG
+    SLICE_X7Y48          FDRE                                         r  TestHarness/tile/core/div/remainder_reg[33]/C
+                         clock pessimism             -0.250     1.861    
+    SLICE_X7Y48          FDRE (Hold_fdre_C_D)         0.092     1.953    TestHarness/tile/core/div/remainder_reg[33]
+  -------------------------------------------------------------------
+                         required time                         -1.953    
+                         arrival time                           2.020    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.103ns  (arrival time - required time)
+  Source:                 TestHarness/tile/frontend/icache/refill_addr_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/tile/frontend/icache/tag_array_0_reg/DIADI[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.314ns  (logic 0.141ns (44.921%)  route 0.173ns (55.079%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.055ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.111ns
+    Source Clock Delay      (SCD):    1.552ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.632     1.552    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    SLICE_X63Y38         FDRE                                         r  TestHarness/tile/frontend/icache/refill_addr_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y38         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  TestHarness/tile/frontend/icache/refill_addr_reg[19]/Q
+                         net (fo=2, routed)           0.173     1.866    TestHarness/tile/frontend/icache/Q[13]
+    RAMB18_X1Y14         RAMB18E1                                     r  TestHarness/tile/frontend/icache/tag_array_0_reg/DIADI[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.946     2.111    TestHarness/tile/frontend/icache/clock_IBUF_BUFG
+    RAMB18_X1Y14         RAMB18E1                                     r  TestHarness/tile/frontend/icache/tag_array_0_reg/CLKBWRCLK
+                         clock pessimism             -0.504     1.607    
+    RAMB18_X1Y14         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_DIADI[7])
+                                                      0.155     1.762    TestHarness/tile/frontend/icache/tag_array_0_reg
+  -------------------------------------------------------------------
+                         required time                         -1.762    
+                         arrival time                           1.866    
+  -------------------------------------------------------------------
+                         slack                                  0.103    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA_D1/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA_D1/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA_D1/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMA_D1
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB_D1/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB_D1/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB_D1/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMB_D1
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC_D1/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.429ns  (logic 0.141ns (32.898%)  route 0.288ns (67.102%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.069ns
+    Source Clock Delay      (SCD):    1.550ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.630     1.550    TestHarness/pbus/coupler_from_sbus/buffer/Queue/clock_IBUF_BUFG
+    SLICE_X44Y36         FDRE                                         r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDRE (Prop_fdre_C_Q)         0.141     1.691 r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/value_reg/Q
+                         net (fo=155, routed)         0.288     1.979    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/ADDRD0
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC_D1/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=3692, routed)        0.904     2.069    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/WCLK
+    SLICE_X42Y35         RAMD32                                       r  TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC_D1/CLK
+                         clock pessimism             -0.504     1.565    
+    SLICE_X42Y35         RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.875    TestHarness/pbus/coupler_from_sbus/buffer/Queue/ram_param_reg_0_1_0_2/RAMC_D1
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           1.979    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X0Y5   TestHarness/tile/dcache/data/data_arrays_0_2_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X0Y6   TestHarness/tile/dcache/data/data_arrays_0_3_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X0Y8   TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X1Y14  TestHarness/tile/frontend/icache/tag_array_0_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB18_X1Y14  TestHarness/tile/frontend/icache/tag_array_0_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X0Y4   TestHarness/tile/dcache/data/data_arrays_0_0_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X0Y7   TestHarness/tile/dcache/data/data_arrays_0_1_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y5   TestHarness/tile/dcache/data/data_arrays_0_2_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y6   TestHarness/tile/dcache/data/data_arrays_0_3_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X0Y8   TestHarness/tile/frontend/icache/data_arrays_0_0_reg/CLKBWRCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMA/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMA_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMB/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMB_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMC/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMC_D1/CLK
+Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMD/CLK
+Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y36  TestHarness/tile/sync_xing_1/Queue/ram_mask_reg_0_1_0_3/RAMD_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y24  TestHarness/pbus/sync_xing/Queue/ram_data_reg_0_1_0_5/RAMA/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y24  TestHarness/pbus/sync_xing/Queue/ram_data_reg_0_1_0_5/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMB/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMB_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMC/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMC_D1/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMD/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y32  TestHarness/pbus/sync_xing/Queue/ram_address_reg_0_1_6_11/RAMD_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y37  TestHarness/tile/sync_xing_1/Queue/ram_size_reg_0_1_0_2/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y37  TestHarness/tile/sync_xing_1/Queue/ram_size_reg_0_1_0_2/RAMA_D1/CLK
+
+
+

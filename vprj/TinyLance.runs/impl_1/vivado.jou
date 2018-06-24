@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 17:03:31 2018
+# Process ID: 22321
+# Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1
+# Command line: vivado -log TinyLanceTestHarness.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TinyLanceTestHarness.tcl -notrace
+# Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.vdi
+# Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source TinyLanceTestHarness.tcl -notrace

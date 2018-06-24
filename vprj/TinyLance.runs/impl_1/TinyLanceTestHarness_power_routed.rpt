@@ -1,0 +1,350 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date             : Sun Jun 24 17:06:25 2018
+| Host             : palladium running 64-bit Ubuntu 18.04 LTS
+| Command          : report_power -file TinyLanceTestHarness_power_routed.rpt -pb TinyLanceTestHarness_power_summary_routed.pb -rpx TinyLanceTestHarness_power_routed.rpx
+| Design           : TinyLanceTestHarness
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.166        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.068        |
+| Device Static (W)        | 0.098        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.011 |        3 |       --- |             --- |
+| Slice Logic              |     0.017 |    11295 |       --- |             --- |
+|   LUT as Logic           |     0.016 |     5778 |     63400 |            9.11 |
+|   CARRY4                 |    <0.001 |      308 |     15850 |            1.94 |
+|   LUT as Distributed RAM |    <0.001 |      468 |     19000 |            2.46 |
+|   Register               |    <0.001 |     2750 |    126800 |            2.17 |
+|   F7/F8 Muxes            |    <0.001 |      215 |     63400 |            0.34 |
+|   Others                 |     0.000 |      102 |       --- |             --- |
+| Signals                  |     0.026 |     8783 |       --- |             --- |
+| Block RAM                |     0.013 |      5.5 |       135 |            4.07 |
+| DSPs                     |     0.002 |        2 |       240 |            0.83 |
+| I/O                      |    <0.001 |        3 |       210 |            1.43 |
+| Static Power             |     0.098 |          |           |                 |
+| Total                    |     0.166 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.083 |       0.067 |      0.015 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.001 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------+--------+-----------------+
+| Clock       | Domain | Constraint (ns) |
++-------------+--------+-----------------+
+| sys_clk_pin | clock  |            10.0 |
++-------------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------+-----------+
+| Name                                  | Power (W) |
++---------------------------------------+-----------+
+| TinyLanceTestHarness                  |     0.068 |
+|   TestHarness                         |     0.068 |
+|     clint                             |    <0.001 |
+|     debug_1                           |    <0.001 |
+|       dmInner                         |    <0.001 |
+|         dmInner                       |    <0.001 |
+|     int_sync_xing_sourcelzy           |    <0.001 |
+|       AsyncResetRegVec_w2_i0          |    <0.001 |
+|         reg_0                         |    <0.001 |
+|         reg_1                         |    <0.001 |
+|     led_1                             |    <0.001 |
+|     pbus                              |     0.006 |
+|       coupler_from_sbus               |     0.003 |
+|         atomics                       |    <0.001 |
+|         buffer                        |     0.002 |
+|           Queue                       |    <0.001 |
+|             ram_address_reg_0_1_0_5   |    <0.001 |
+|             ram_address_reg_0_1_12_17 |    <0.001 |
+|             ram_address_reg_0_1_18_23 |    <0.001 |
+|             ram_address_reg_0_1_24_29 |    <0.001 |
+|             ram_address_reg_0_1_30_31 |    <0.001 |
+|             ram_address_reg_0_1_6_11  |    <0.001 |
+|             ram_data_reg_0_1_0_5      |    <0.001 |
+|             ram_data_reg_0_1_12_17    |    <0.001 |
+|             ram_data_reg_0_1_18_23    |    <0.001 |
+|             ram_data_reg_0_1_24_29    |    <0.001 |
+|             ram_data_reg_0_1_30_31    |    <0.001 |
+|             ram_data_reg_0_1_6_11     |    <0.001 |
+|             ram_mask_reg_0_1_0_3      |    <0.001 |
+|             ram_opcode_reg_0_1_0_2    |    <0.001 |
+|             ram_param_reg_0_1_0_2     |    <0.001 |
+|             ram_size_reg_0_1_0_2      |    <0.001 |
+|             ram_source_reg_0_1_0_0    |    <0.001 |
+|             ram_source_reg_0_1_1_1    |    <0.001 |
+|           Queue_1                     |    <0.001 |
+|             ram_data_reg_0_1_0_5      |    <0.001 |
+|             ram_data_reg_0_1_12_17    |    <0.001 |
+|             ram_data_reg_0_1_18_23    |    <0.001 |
+|             ram_data_reg_0_1_24_29    |    <0.001 |
+|             ram_data_reg_0_1_30_31    |    <0.001 |
+|             ram_data_reg_0_1_6_11     |    <0.001 |
+|             ram_error_reg_0_1_0_0     |    <0.001 |
+|             ram_opcode_reg_0_1_0_2    |    <0.001 |
+|             ram_size_reg_0_1_0_2      |    <0.001 |
+|             ram_source_reg_0_1_0_0    |    <0.001 |
+|             ram_source_reg_0_1_1_1    |    <0.001 |
+|       coupler_to_slave_named_bootrom  |    <0.001 |
+|         fragmenter                    |    <0.001 |
+|           Repeater                    |    <0.001 |
+|       coupler_to_slave_named_clint    |    <0.001 |
+|         fragmenter                    |    <0.001 |
+|           Repeater                    |    <0.001 |
+|       coupler_to_slave_named_debug    |    <0.001 |
+|         fragmenter                    |    <0.001 |
+|           Repeater                    |    <0.001 |
+|       coupler_to_slave_named_led      |    <0.001 |
+|         fragmenter                    |    <0.001 |
+|           Repeater                    |    <0.001 |
+|       coupler_to_slave_named_plic     |    <0.001 |
+|         fragmenter                    |    <0.001 |
+|           Repeater                    |    <0.001 |
+|       periphery_bus_xbar              |    <0.001 |
+|       sync_xing                       |     0.001 |
+|         Queue                         |    <0.001 |
+|           ram_address_reg_0_1_0_5     |    <0.001 |
+|           ram_address_reg_0_1_12_17   |    <0.001 |
+|           ram_address_reg_0_1_18_23   |    <0.001 |
+|           ram_address_reg_0_1_24_29   |    <0.001 |
+|           ram_address_reg_0_1_30_31   |    <0.001 |
+|           ram_address_reg_0_1_6_11    |    <0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_mask_reg_0_1_0_3        |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_param_reg_0_1_0_2       |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|           ram_source_reg_0_1_1_1      |    <0.001 |
+|         Queue_1                       |    <0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_error_reg_0_1_0_0       |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|           ram_source_reg_0_1_1_1      |    <0.001 |
+|     plic                              |    <0.001 |
+|       Queue                           |    <0.001 |
+|     sbus                              |    <0.001 |
+|       coupler_from_tile_named_tile    |    <0.001 |
+|         cork                          |    <0.001 |
+|           Queue_1                     |    <0.001 |
+|             ram_data_reg_0_1_0_5      |    <0.001 |
+|             ram_error_reg_0_1_0_0     |    <0.001 |
+|             ram_opcode_reg_0_1_0_2    |    <0.001 |
+|             ram_size_reg_0_1_0_2      |    <0.001 |
+|             ram_source_reg_0_1_0_0    |    <0.001 |
+|       coupler_to_pbus                 |    <0.001 |
+|         fixer                         |    <0.001 |
+|     tile                              |     0.061 |
+|       core                            |     0.019 |
+|         _T_1162_reg_r1_0_31_0_5       |    <0.001 |
+|         _T_1162_reg_r1_0_31_12_17     |    <0.001 |
+|         _T_1162_reg_r1_0_31_18_23     |    <0.001 |
+|         _T_1162_reg_r1_0_31_24_29     |    <0.001 |
+|         _T_1162_reg_r1_0_31_30_31     |    <0.001 |
+|         _T_1162_reg_r1_0_31_6_11      |    <0.001 |
+|         _T_1162_reg_r2_0_31_0_5       |    <0.001 |
+|         _T_1162_reg_r2_0_31_12_17     |    <0.001 |
+|         _T_1162_reg_r2_0_31_18_23     |    <0.001 |
+|         _T_1162_reg_r2_0_31_24_29     |    <0.001 |
+|         _T_1162_reg_r2_0_31_30_31     |    <0.001 |
+|         _T_1162_reg_r2_0_31_6_11      |    <0.001 |
+|         csr                           |     0.007 |
+|         div                           |     0.005 |
+|         ibuf                          |    <0.001 |
+|       dcache                          |     0.012 |
+|         AMOALU                        |    <0.001 |
+|         data                          |     0.009 |
+|         tlb                           |    <0.001 |
+|           pmp                         |    <0.001 |
+|       dcacheArb                       |    <0.001 |
+|       dtim_adapter                    |    <0.001 |
+|       fragmenter_1                    |    <0.001 |
+|         Repeater                      |    <0.001 |
+|       frontend                        |     0.027 |
+|         fq                            |     0.016 |
+|         icache                        |     0.007 |
+|         tlb                           |    <0.001 |
+|           pmp                         |    <0.001 |
+|       sync_xing                       |     0.002 |
+|         Queue                         |    <0.001 |
+|           ram_address_reg_0_1_0_5     |    <0.001 |
+|           ram_address_reg_0_1_12_17   |    <0.001 |
+|           ram_address_reg_0_1_18_23   |    <0.001 |
+|           ram_address_reg_0_1_24_29   |    <0.001 |
+|           ram_address_reg_0_1_30_31   |    <0.001 |
+|           ram_address_reg_0_1_6_11    |    <0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_mask_reg_0_1_0_3        |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_param_reg_0_1_0_2       |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|         Queue_1                       |     0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_error_reg_0_1_0_0       |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|       sync_xing_1                     |    <0.001 |
+|         Queue                         |    <0.001 |
+|           ram_address_reg_0_1_0_5     |    <0.001 |
+|           ram_address_reg_0_1_12_17   |    <0.001 |
+|           ram_address_reg_0_1_18_23   |    <0.001 |
+|           ram_address_reg_0_1_24_29   |    <0.001 |
+|           ram_address_reg_0_1_30_31   |    <0.001 |
+|           ram_address_reg_0_1_6_11    |    <0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_mask_reg_0_1_0_3        |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_param_reg_0_1_0_2       |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|           ram_source_reg_0_1_1_1      |    <0.001 |
+|         Queue_1                       |    <0.001 |
+|           ram_data_reg_0_1_0_5        |    <0.001 |
+|           ram_data_reg_0_1_12_17      |    <0.001 |
+|           ram_data_reg_0_1_18_23      |    <0.001 |
+|           ram_data_reg_0_1_24_29      |    <0.001 |
+|           ram_data_reg_0_1_30_31      |    <0.001 |
+|           ram_data_reg_0_1_6_11       |    <0.001 |
+|           ram_error_reg_0_1_0_0       |    <0.001 |
+|           ram_opcode_reg_0_1_0_2      |    <0.001 |
+|           ram_size_reg_0_1_0_2        |    <0.001 |
+|           ram_source_reg_0_1_0_0      |    <0.001 |
+|           ram_source_reg_0_1_1_1      |    <0.001 |
+|       tlMasterXbar                    |    <0.001 |
++---------------------------------------+-----------+
+
+
