@@ -1,0 +1,1 @@
+-wto "129df066ee004309af7f41bb061fd6c7" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "TinyLanceTestHarness_behav" "xil_defaultlib.TinyLanceTestHarness" "xil_defaultlib.glbl" -log "elaborate.log" 

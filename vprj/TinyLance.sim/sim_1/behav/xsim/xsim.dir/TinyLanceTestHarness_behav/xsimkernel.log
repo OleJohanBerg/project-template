@@ -1,0 +1,7 @@
+Running: xsim.dir/TinyLanceTestHarness_behav/xsimk -simmode gui -wdb TinyLanceTestHarness_behav.wdb -simrunnum 0 -socket 53273
+Design successfully loaded
+Design Loading Memory Usage: 64876 KB (Peak: 65008 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 156200 KB (Peak: 212148 KB)
+Simulation CPU Usage: 70 ms

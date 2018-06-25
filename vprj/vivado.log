@@ -2,122 +2,26 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sun Jun 24 16:33:01 2018
-# Process ID: 19233
+# Start of session at: Mon Jun 25 18:17:53 2018
+# Process ID: 6328
 # Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj
-# Command line: vivado
+# Command line: vivado TinyLance.xpr
 # Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.log
 # Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.jou
 #-----------------------------------------------------------
 start_gui
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /opt/Xilinx/Vivado/2018.1/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-create_project TinyLance . -part xc7a100tcsg324-1
+open_project TinyLance.xpr
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
-set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-add_files -norecurse {/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v /home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v /home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v}
-import_files -fileset constrs_1 -force -norecurse /home/tetsuya/fpga/Nexys-4-DDR-Master.xdc
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Jun 24 16:35:51 2018] Launched synth_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
-[Sun Jun 24 16:35:51 2018] Launched impl_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Jun 24 16:39:21 2018] Launched synth_1...
+[Mon Jun 25 18:18:20 2018] Launched synth_1...
 Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
-[Sun Jun 24 16:39:21 2018] Launched impl_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
-reset_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Jun 24 16:42:34 2018] Launched synth_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
-[Sun Jun 24 16:42:34 2018] Launched impl_1...
+[Mon Jun 25 18:18:20 2018] Launched impl_1...
 Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -153,23 +57,5 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Sun Jun 24 16:59:36 2018] Launched synth_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
-[Sun Jun 24 16:59:36 2018] Launched impl_1...
-Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 24 17:07:32 2018...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 25 18:25:26 2018...

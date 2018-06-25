@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 25 18:01:18 2018
+# Process ID: 21475
+# Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj
+# Command line: vivado TinyLance.xpr
+# Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.log
+# Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project TinyLance.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

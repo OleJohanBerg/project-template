@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -74,7 +73,9 @@ set rc [catch {
   set_property parent.project_path /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.xpr [current_project]
   set_property ip_output_repo /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/TinyLanceTestHarness.dcp
+  read_ip -quiet /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sources_1/ip/SlowClock/SlowClock.xci
   read_xdc /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/constrs_1/imports/fpga/Nexys-4-DDR-Master.xdc
   link_design -top TinyLanceTestHarness -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
@@ -155,6 +156,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force TinyLanceTestHarness.mmi }
   write_bitstream -force TinyLanceTestHarness.bit 
   catch {write_debug_probes -quiet -force TinyLanceTestHarness}

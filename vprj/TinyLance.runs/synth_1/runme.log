@@ -14,12 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21945 
+INFO: Helper process launched with PID 6481 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1304.289 ; gain = 109.891 ; free physical = 1611 ; free virtual = 6010
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1338.770 ; gain = 111.000 ; free physical = 2669 ; free virtual = 6217
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TinyLanceTestHarness' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:147765]
-INFO: [Synth 8-6157] synthesizing module 'TinyLanceTop' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:146992]
+INFO: [Synth 8-6157] synthesizing module 'TinyLanceTestHarness' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:147761]
+INFO: [Synth 8-6157] synthesizing module 'SlowClock' [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/.Xil/Vivado-6470-palladium/realtime/SlowClock_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SlowClock' (1#1) [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/.Xil/Vivado-6470-palladium/realtime/SlowClock_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'TinyLanceTop' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:146988]
 INFO: [Synth 8-6157] synthesizing module 'SystemBus' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24254]
 INFO: [Synth 8-6157] synthesizing module 'TLXbar' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2659]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2725]
@@ -27,161 +29,161 @@ INFO: [Synth 8-6157] synthesizing module 'TLMonitor' [/home/tetsuya/fpga/rocket-
 INFO: [Synth 8-6157] synthesizing module 'plusarg_reader' [/home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v:7]
 	Parameter FORMAT bound to: tilelink_timeout=%d - type: string 
 	Parameter DEFAULT bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'plusarg_reader' (1#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor' (2#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'TLXbar' (3#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2659]
+INFO: [Synth 8-6155] done synthesizing module 'plusarg_reader' (2#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor' (3#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TLXbar' (4#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2659]
 INFO: [Synth 8-6157] synthesizing module 'TLSplitter' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5538]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5596]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2880]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_1' (4#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2880]
-INFO: [Synth 8-6155] done synthesizing module 'TLSplitter' (5#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5538]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_1' (5#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:2880]
+INFO: [Synth 8-6155] done synthesizing module 'TLSplitter' (6#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5538]
 INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14255]
 INFO: [Synth 8-6157] synthesizing module 'TLFIFOFixer' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8311]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8457]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5653]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_2' (6#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5653]
-INFO: [Synth 8-6155] done synthesizing module 'TLFIFOFixer' (7#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8311]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_2' (7#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:5653]
+INFO: [Synth 8-6155] done synthesizing module 'TLFIFOFixer' (8#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8311]
 INFO: [Synth 8-6157] synthesizing module 'TLWidthWidget' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11367]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11425]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8709]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_3' (8#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8709]
-INFO: [Synth 8-6155] done synthesizing module 'TLWidthWidget' (9#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11367]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_3' (9#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:8709]
+INFO: [Synth 8-6155] done synthesizing module 'TLWidthWidget' (10#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11367]
 INFO: [Synth 8-6157] synthesizing module 'TLBuffer' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14140]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14198]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11482]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_4' (10#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11482]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer' (11#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14140]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule' (12#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14255]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_4' (11#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:11482]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer' (12#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14140]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule' (13#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14255]
 INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23906]
 INFO: [Synth 8-6157] synthesizing module 'TLBuffer_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17266]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17324]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_5' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14608]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_5' (13#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14608]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_1' (14#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17266]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_5' (14#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:14608]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_1' (15#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17266]
 INFO: [Synth 8-6157] synthesizing module 'TLFIFOFixer_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20039]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20096]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17381]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_6' (15#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17381]
-INFO: [Synth 8-6155] done synthesizing module 'TLFIFOFixer_1' (16#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20039]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_6' (16#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:17381]
+INFO: [Synth 8-6155] done synthesizing module 'TLFIFOFixer_1' (17#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20039]
 INFO: [Synth 8-6157] synthesizing module 'TLCacheCork' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23087]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23365]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_7' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20152]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_7' (17#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20152]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_7' (18#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:20152]
 INFO: [Synth 8-6157] synthesizing module 'Queue' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:22818]
-INFO: [Synth 8-6155] done synthesizing module 'Queue' (18#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:22818]
-INFO: [Synth 8-6155] done synthesizing module 'TLCacheCork' (19#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23087]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_2' (20#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23906]
-INFO: [Synth 8-6155] done synthesizing module 'SystemBus' (21#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24254]
-INFO: [Synth 8-6157] synthesizing module 'PeripheryBus' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71816]
+INFO: [Synth 8-6155] done synthesizing module 'Queue' (19#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:22818]
+INFO: [Synth 8-6155] done synthesizing module 'TLCacheCork' (20#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23087]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_2' (21#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:23906]
+INFO: [Synth 8-6155] done synthesizing module 'SystemBus' (22#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24254]
+INFO: [Synth 8-6157] synthesizing module 'PeripheryBus' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71818]
 INFO: [Synth 8-6157] synthesizing module 'TLXbar_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:27329]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:27763]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_8' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24705]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_8' (22#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24705]
-INFO: [Synth 8-6155] done synthesizing module 'TLXbar_1' (23#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:27329]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36014]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_8' (23#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:24705]
+INFO: [Synth 8-6155] done synthesizing module 'TLXbar_1' (24#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:27329]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36016]
 INFO: [Synth 8-6157] synthesizing module 'TLBuffer_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31784]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31882]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_9' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:28588]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_9' (24#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:28588]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_9' (25#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:28588]
 INFO: [Synth 8-6157] synthesizing module 'Queue_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31246]
-INFO: [Synth 8-6155] done synthesizing module 'Queue_2' (25#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31246]
+INFO: [Synth 8-6155] done synthesizing module 'Queue_2' (26#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31246]
 INFO: [Synth 8-6157] synthesizing module 'Queue_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31515]
-INFO: [Synth 8-6155] done synthesizing module 'Queue_3' (26#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31515]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_2' (27#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31784]
+INFO: [Synth 8-6155] done synthesizing module 'Queue_3' (27#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31515]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_2' (28#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:31784]
 INFO: [Synth 8-6157] synthesizing module 'TLAtomicAutomata' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:34663]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:35207]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:35208]
 INFO: [Synth 8-6157] synthesizing module 'TLMonitor_10' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:32005]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_10' (28#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:32005]
-INFO: [Synth 8-6155] done synthesizing module 'TLAtomicAutomata' (29#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:34663]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_3' (30#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36014]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:38927]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39025]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_11' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36269]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_11' (31#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36269]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_3' (32#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:38927]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44987]
-INFO: [Synth 8-6157] synthesizing module 'TLFragmenter' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41827]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41998]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_12' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39148]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_12' (33#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39148]
-INFO: [Synth 8-6157] synthesizing module 'Repeater' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41690]
-INFO: [Synth 8-6155] done synthesizing module 'Repeater' (34#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41690]
-INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter' (35#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41827]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44884]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44936]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_13' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:42342]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_13' (36#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:42342]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_4' (37#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44884]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_4' (38#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44987]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_5' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50983]
-INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47857]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48028]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_14' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:45212]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_14' (39#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:45212]
-INFO: [Synth 8-6157] synthesizing module 'Repeater_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47720]
-INFO: [Synth 8-6155] done synthesizing module 'Repeater_1' (40#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47720]
-INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_1' (41#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47857]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_5' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50880]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50932]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_15' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48372]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_15' (42#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48372]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_5' (43#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50880]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_5' (44#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50983]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56975]
-INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53851]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54022]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_16' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:51208]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_16' (45#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:51208]
-INFO: [Synth 8-6157] synthesizing module 'Repeater_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53714]
-INFO: [Synth 8-6155] done synthesizing module 'Repeater_2' (46#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53714]
-INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_2' (47#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53851]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56872]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56924]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_17' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54366]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_17' (48#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54366]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_6' (49#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56872]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_6' (50#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56975]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_7' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59909]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_7' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59794]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59852]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_18' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:57200]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_18' (51#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:57200]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_7' (52#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59794]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_7' (53#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59909]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_8' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65837]
-INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62711]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62882]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_19' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:60066]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_19' (54#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:60066]
-INFO: [Synth 8-6157] synthesizing module 'Repeater_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62574]
-INFO: [Synth 8-6155] done synthesizing module 'Repeater_3' (55#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62574]
-INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_3' (56#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62711]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_8' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65734]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65786]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_20' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:63226]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_20' (57#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:63226]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_8' (58#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65734]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_8' (59#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65837]
-INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_9' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71617]
-INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68627]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68774]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_21' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:66062]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_21' (60#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:66062]
-INFO: [Synth 8-6157] synthesizing module 'Repeater_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68490]
-INFO: [Synth 8-6155] done synthesizing module 'Repeater_4' (61#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68490]
-INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_4' (62#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68627]
-INFO: [Synth 8-6157] synthesizing module 'TLBuffer_9' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71523]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71570]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_22' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:69095]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_22' (63#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:69095]
-INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_9' (64#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71523]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_9' (65#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71617]
-INFO: [Synth 8-6155] done synthesizing module 'PeripheryBus' (66#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71816]
-INFO: [Synth 8-6157] synthesizing module 'TLPLIC' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75628]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75902]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_23' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:72989]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_23' (67#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:72989]
-INFO: [Synth 8-6157] synthesizing module 'Queue_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75449]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_10' (29#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:32005]
+INFO: [Synth 8-6155] done synthesizing module 'TLAtomicAutomata' (30#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:34663]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_3' (31#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36016]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:38929]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39027]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_11' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36271]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_11' (32#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:36271]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_3' (33#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:38929]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44989]
+INFO: [Synth 8-6157] synthesizing module 'TLFragmenter' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41829]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:42000]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_12' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39150]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_12' (34#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:39150]
+INFO: [Synth 8-6157] synthesizing module 'Repeater' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41692]
+INFO: [Synth 8-6155] done synthesizing module 'Repeater' (35#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41692]
+INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter' (36#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:41829]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44886]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44938]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_13' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:42344]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_13' (37#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:42344]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_4' (38#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44886]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_4' (39#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:44989]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_5' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50985]
+INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47859]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48030]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_14' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:45214]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_14' (40#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:45214]
+INFO: [Synth 8-6157] synthesizing module 'Repeater_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47722]
+INFO: [Synth 8-6155] done synthesizing module 'Repeater_1' (41#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47722]
+INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_1' (42#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:47859]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_5' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50882]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50934]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_15' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48374]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_15' (43#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:48374]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_5' (44#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50882]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_5' (45#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:50985]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56977]
+INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53853]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54024]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_16' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:51210]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_16' (46#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:51210]
+INFO: [Synth 8-6157] synthesizing module 'Repeater_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53716]
+INFO: [Synth 8-6155] done synthesizing module 'Repeater_2' (47#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53716]
+INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_2' (48#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:53853]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56874]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56926]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_17' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54368]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_17' (49#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:54368]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_6' (50#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56874]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_6' (51#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:56977]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_7' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59911]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_7' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59796]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59854]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_18' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:57202]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_18' (52#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:57202]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_7' (53#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59796]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_7' (54#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:59911]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_8' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65839]
+INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62713]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62884]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_19' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:60068]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_19' (55#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:60068]
+INFO: [Synth 8-6157] synthesizing module 'Repeater_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62576]
+INFO: [Synth 8-6155] done synthesizing module 'Repeater_3' (56#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62576]
+INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_3' (57#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:62713]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_8' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65736]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65788]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_20' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:63228]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_20' (58#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:63228]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_8' (59#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65736]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_8' (60#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:65839]
+INFO: [Synth 8-6157] synthesizing module 'SimpleLazyModule_9' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71619]
+INFO: [Synth 8-6157] synthesizing module 'TLFragmenter_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68629]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68776]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_21' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:66064]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_21' (61#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:66064]
+INFO: [Synth 8-6157] synthesizing module 'Repeater_4' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68492]
+INFO: [Synth 8-6155] done synthesizing module 'Repeater_4' (62#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68492]
+INFO: [Synth 8-6155] done synthesizing module 'TLFragmenter_4' (63#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:68629]
+INFO: [Synth 8-6157] synthesizing module 'TLBuffer_9' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71525]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71572]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_22' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:69097]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_22' (64#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:69097]
+INFO: [Synth 8-6155] done synthesizing module 'TLBuffer_9' (65#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71525]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleLazyModule_9' (66#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71619]
+INFO: [Synth 8-6155] done synthesizing module 'PeripheryBus' (67#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:71818]
+INFO: [Synth 8-6157] synthesizing module 'TLPLIC' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75630]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75904]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_23' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:72991]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_23' (68#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:72991]
+INFO: [Synth 8-6157] synthesizing module 'Queue_6' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75451]
 WARNING: [Synth 8-4767] Trying to implement RAM 'ram_read_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: Write port has constant address. 
@@ -222,91 +224,89 @@ Reason is one or more of the following :
 ARead Node size: 9, nWords: 1, wSize: 9, memSize: 9
 AWrite Node size: 9, nWords: 1, wSize: 9, memSize: 9
 RAM "ram_extra_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'Queue_6' (68#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75449]
-INFO: [Synth 8-6155] done synthesizing module 'TLPLIC' (69#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75628]
-INFO: [Synth 8-6157] synthesizing module 'CLINT' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:78761]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79015]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_24' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:76335]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_24' (70#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:76335]
-INFO: [Synth 8-6155] done synthesizing module 'CLINT' (71#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:78761]
-INFO: [Synth 8-6157] synthesizing module 'TLDebugModule' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:111350]
-INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleOuterAsync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86855]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86929]
-INFO: [Synth 8-6157] synthesizing module 'TLXbar_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81219]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81271]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_25' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79317]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_25' (72#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79317]
-INFO: [Synth 8-6155] done synthesizing module 'TLXbar_3' (73#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81219]
-INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleOuter' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83966]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84014]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_26' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81504]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_26' (74#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81504]
-INFO: [Synth 8-6157] synthesizing module 'AsyncResetRegVec_w32_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83362]
+INFO: [Synth 8-6155] done synthesizing module 'Queue_6' (69#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75451]
+INFO: [Synth 8-6155] done synthesizing module 'TLPLIC' (70#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:75630]
+INFO: [Synth 8-6157] synthesizing module 'CLINT' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:78763]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79017]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_24' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:76337]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_24' (71#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:76337]
+INFO: [Synth 8-6155] done synthesizing module 'CLINT' (72#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:78763]
+INFO: [Synth 8-6157] synthesizing module 'TLDebugModule' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:111352]
+INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleOuterAsync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86857]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86931]
+INFO: [Synth 8-6157] synthesizing module 'TLXbar_3' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81221]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81273]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_25' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79319]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_25' (73#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:79319]
+INFO: [Synth 8-6155] done synthesizing module 'TLXbar_3' (74#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81221]
+INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleOuter' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83968]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84016]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_26' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81506]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_26' (75#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:81506]
+INFO: [Synth 8-6157] synthesizing module 'AsyncResetRegVec_w32_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83364]
 INFO: [Synth 8-6157] synthesizing module 'AsyncResetReg' [/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetReg' (75#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetRegVec_w32_i0' (76#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83362]
-INFO: [Synth 8-6157] synthesizing module 'AsyncResetRegVec_w1_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83941]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetRegVec_w1_i0' (77#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83941]
-INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleOuter' (78#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83966]
-INFO: [Synth 8-6157] synthesizing module 'IntSyncCrossingSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84073]
-INFO: [Synth 8-6155] done synthesizing module 'IntSyncCrossingSource' (79#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84073]
-INFO: [Synth 8-6157] synthesizing module 'TLAsyncCrossingSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86590]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86651]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_27' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84079]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_27' (80#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84079]
-INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86222]
-INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d3_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86008]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d3_i0' (81#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86008]
-INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86136]
-INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d4_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86064]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d4_i0' (82#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86064]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync' (83#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86136]
-INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86180]
-INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d1_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86156]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d1_i0' (84#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86156]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync_1' (85#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86180]
-INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86201]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync_2' (86#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86201]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource' (87#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86222]
-INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSink' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86387]
-INFO: [Synth 8-6157] synthesizing module 'SynchronizerShiftReg_w42_d1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86351]
-INFO: [Synth 8-6155] done synthesizing module 'SynchronizerShiftReg_w42_d1' (88#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86351]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSink' (89#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86387]
-INFO: [Synth 8-6155] done synthesizing module 'TLAsyncCrossingSource' (90#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86590]
-INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSource_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86726]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource_1' (91#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86726]
-INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleOuterAsync' (92#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86855]
-INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleInnerAsync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:111062]
-INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleInner' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:91967]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:100448]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_28' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:87025]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_28' (93#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:87025]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:100465]
-INFO: [Synth 8-6157] synthesizing module 'TLMonitor_29' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:89543]
-INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_29' (94#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:89543]
-INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleInner' (95#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:91967]
-INFO: [Synth 8-6157] synthesizing module 'TLAsyncCrossingSink' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110682]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetReg' (76#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetRegVec_w32_i0' (77#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83364]
+INFO: [Synth 8-6157] synthesizing module 'AsyncResetRegVec_w1_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83943]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetRegVec_w1_i0' (78#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83943]
+INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleOuter' (79#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:83968]
+INFO: [Synth 8-6157] synthesizing module 'IntSyncCrossingSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84075]
+INFO: [Synth 8-6155] done synthesizing module 'IntSyncCrossingSource' (80#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84075]
+INFO: [Synth 8-6157] synthesizing module 'TLAsyncCrossingSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86592]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86653]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_27' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84081]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_27' (81#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:84081]
+INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSource' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86224]
+INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d3_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86010]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d3_i0' (82#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86010]
+INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86138]
+INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d4_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86066]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d4_i0' (83#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86066]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync' (84#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86138]
+INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86182]
+INFO: [Synth 8-6157] synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d1_i0' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86158]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncResetSynchronizerShiftReg_w1_d1_i0' (85#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86158]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync_1' (86#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86182]
+INFO: [Synth 8-6157] synthesizing module 'AsyncValidSync_2' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86203]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncValidSync_2' (87#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86203]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource' (88#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86224]
+INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSink' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86389]
+INFO: [Synth 8-6157] synthesizing module 'SynchronizerShiftReg_w42_d1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86353]
+INFO: [Synth 8-6155] done synthesizing module 'SynchronizerShiftReg_w42_d1' (89#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86353]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSink' (90#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86389]
+INFO: [Synth 8-6155] done synthesizing module 'TLAsyncCrossingSource' (91#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86592]
+INFO: [Synth 8-6157] synthesizing module 'AsyncQueueSource_1' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86728]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource_1' (92#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86728]
+INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleOuterAsync' (93#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:86857]
+INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleInnerAsync' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:111064]
+INFO: [Synth 8-6157] synthesizing module 'TLDebugModuleInner' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:91969]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:100450]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_28' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:87027]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_28' (94#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:87027]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:100467]
+INFO: [Synth 8-6157] synthesizing module 'TLMonitor_29' [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:89545]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'SynchronizerShiftReg_w54_d1' (96#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110234]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSink_1' (97#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110270]
-INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource_2' (98#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110474]
-INFO: [Synth 8-6155] done synthesizing module 'TLAsyncCrossingSink' (99#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110682]
-INFO: [Synth 8-6155] done synthesizing module 'SynchronizerShiftReg_w12_d1' (100#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110827]
+INFO: [Synth 8-6155] done synthesizing module 'TLMonitor_29' (95#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:89545]
+INFO: [Synth 8-6155] done synthesizing module 'TLDebugModuleInner' (96#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:91969]
+INFO: [Synth 8-6155] done synthesizing module 'SynchronizerShiftReg_w54_d1' (97#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110236]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSink_1' (98#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110272]
+INFO: [Synth 8-6155] done synthesizing module 'AsyncQueueSource_2' (99#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110476]
+INFO: [Synth 8-6155] done synthesizing module 'TLAsyncCrossingSink' (100#1) [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:110684]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:116705]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:116724]
-WARNING: [Synth 8-6014] Unused sequential element s2_flush_valid_pre_tag_ecc_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:120198]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:126742]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:129555]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:137094]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:116707]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:116726]
+WARNING: [Synth 8-6014] Unused sequential element s2_flush_valid_pre_tag_ecc_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:120200]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:126744]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:129557]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:137096]
 	Parameter FORMAT bound to: max_core_cycles=%d - type: string 
 	Parameter DEFAULT bound to: 0 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element _T_2466_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138837]
-WARNING: [Synth 8-6014] Unused sequential element _T_2468_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138852]
-WARNING: [Synth 8-6014] Unused sequential element _T_2471_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138855]
-WARNING: [Synth 8-6014] Unused sequential element _T_2473_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138870]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:143408]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:146442]
+WARNING: [Synth 8-6014] Unused sequential element _T_2466_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138839]
+WARNING: [Synth 8-6014] Unused sequential element _T_2468_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138854]
+WARNING: [Synth 8-6014] Unused sequential element _T_2471_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138857]
+WARNING: [Synth 8-6014] Unused sequential element _T_2473_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:138872]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:143407]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:146438]
 WARNING: [Synth 8-3331] design TLMonitor_35 has unconnected port clock
 WARNING: [Synth 8-3331] design TLMonitor_35 has unconnected port reset
 WARNING: [Synth 8-3331] design TLMonitor_35 has unconnected port io_in_a_ready
@@ -409,7 +409,7 @@ WARNING: [Synth 8-3331] design TLMonitor_34 has unconnected port io_in_a_bits_ad
 WARNING: [Synth 8-3331] design TLMonitor_34 has unconnected port io_in_a_bits_mask[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1549.039 ; gain = 354.641 ; free physical = 1453 ; free virtual = 5856
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1583.520 ; gain = 355.750 ; free physical = 2522 ; free virtual = 6060
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -422,16 +422,18 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1549.039 ; gain = 354.641 ; free physical = 1496 ; free virtual = 5899
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1583.520 ; gain = 355.750 ; free physical = 2572 ; free virtual = 6107
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1549.039 ; gain = 354.641 ; free physical = 1496 ; free virtual = 5899
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1583.520 ; gain = 355.750 ; free physical = 2572 ; free virtual = 6107
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sources_1/ip/SlowClock/SlowClock/SlowClock_in_context.xdc] for cell 'slowClock'
+Finished Parsing XDC File [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sources_1/ip/SlowClock/SlowClock/SlowClock_in_context.xdc] for cell 'slowClock'
 Parsing XDC File [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/constrs_1/imports/fpga/Nexys-4-DDR-Master.xdc]
 Finished Parsing XDC File [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/constrs_1/imports/fpga/Nexys-4-DDR-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/constrs_1/imports/fpga/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TinyLanceTestHarness_propImpl.xdc].
@@ -441,9 +443,9 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1919.758 ; gain = 0.000 ; free physical = 1037 ; free virtual = 5472
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1948.234 ; gain = 0.000 ; free physical = 2093 ; free virtual = 5679
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 1217 ; free virtual = 5653
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 2360 ; free virtual = 5941
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-6430] The Block RAM data_arrays_0_0_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
@@ -453,7 +455,7 @@ INFO: [Synth 8-6430] The Block RAM data_arrays_0_3_reg may get memory collision 
 INFO: [Synth 8-6430] The Block RAM tag_array_0_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 INFO: [Synth 8-6430] The Block RAM data_arrays_0_0_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 203 ; free virtual = 4644
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:59 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 1343 ; free virtual = 4921
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'TestHarness/debug_1/dmOuter/asource/AsyncQueueSource/widx_bin' (AsyncResetRegVec_w1_i0) to 'TestHarness/debug_1/dmOuter/asource/AsyncQueueSource/widx_gray'
 INFO: [Synth 8-223] decloning instance 'TestHarness/debug_1/dmOuter/asource/AsyncQueueSink/ridx_bin' (AsyncResetRegVec_w1_i0) to 'TestHarness/debug_1/dmOuter/asource/AsyncQueueSink/ridx_gray'
@@ -472,7 +474,7 @@ Report RTL Partitions:
 +------+------------------+------------+----------+
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
-|1     |TinyLanceTop__GB0 |           1|     37671|
+|1     |TinyLanceTop__GB0 |           1|     37695|
 |2     |TLDebugModule     |           1|     29783|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -510,7 +512,7 @@ Detailed RTL Component Info :
 	               54 Bit    Registers := 1     
 	               42 Bit    Registers := 1     
 	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 55    
+	               32 Bit    Registers := 56    
 	               30 Bit    Registers := 10    
 	               29 Bit    Registers := 1     
 	               28 Bit    Registers := 1     
@@ -529,7 +531,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 35    
 	                3 Bit    Registers := 44    
 	                2 Bit    Registers := 32    
-	                1 Bit    Registers := 346   
+	                1 Bit    Registers := 345   
 +---Multipliers : 
 	                 9x33  Multipliers := 1     
 +---RAMs : 
@@ -551,7 +553,7 @@ Detailed RTL Component Info :
 	   2 Input     43 Bit        Muxes := 3     
 	   2 Input     42 Bit        Muxes := 1     
 	   2 Input     33 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 139   
+	   2 Input     32 Bit        Muxes := 140   
 	 513 Input     32 Bit        Muxes := 1     
 	  12 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 1     
@@ -1855,7 +1857,9 @@ Detailed RTL Component Info :
 Module LEDTL 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1878,11 +1882,11 @@ WARNING: [Synth 8-6014] Unused sequential element dmOuter/asource/AsyncQueueSink
 WARNING: [Synth 8-6014] Unused sequential element dmOuter/AsyncQueueSource/AsyncValidSync/source_valid/sync_3/reg_0/q_reg_reg was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v:86]
 INFO: [Synth 8-5544] ROM "RVCExpander/_T_454" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "RVCExpander/_T_14" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135311]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135311]
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135311]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135313]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135313]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135313]
 WARNING: [Synth 8-6014] Unused sequential element  was removed. 
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135311]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v:135313]
 DSP Report: Generating DSP _T_118, operation Mode is: A2*B2.
 DSP Report: register B is absorbed into DSP _T_118.
 DSP Report: register A is absorbed into DSP _T_118.
@@ -2188,7 +2192,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (TestHarne
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (TestHarnessi_0/tile/\intsink/SynchronizerShiftReg_w1_d3/sync_2_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (TestHarnessi_0/tile/\intsink/SynchronizerShiftReg_w1_d3/sync_2_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:53 ; elapsed = 00:03:25 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 365 ; free virtual = 3945
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:56 ; elapsed = 00:03:30 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 641 ; free virtual = 4223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2292,20 +2296,22 @@ Report RTL Partitions:
 +------+------------------+------------+----------+
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
-|1     |TinyLanceTop__GB0 |           1|     23443|
+|1     |TinyLanceTop__GB0 |           1|     23586|
 |2     |TLDebugModule     |           1|       267|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'slowClock/clk_slow' to pin 'slowClock/bbstub_clk_slow/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:59 ; elapsed = 00:03:33 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 243 ; free virtual = 3824
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:02 ; elapsed = 00:03:38 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 518 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:01 ; elapsed = 00:03:35 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 239 ; free virtual = 3820
+Finished Timing Optimization : Time (s): cpu = 00:03:04 ; elapsed = 00:03:40 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2392,7 +2398,7 @@ Report RTL Partitions:
 +------+------------------+------------+----------+
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
-|1     |TinyLanceTop__GB0 |           1|     23443|
+|1     |TinyLanceTop__GB0 |           1|     23586|
 |2     |TLDebugModule     |           1|       267|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -2404,7 +2410,7 @@ INFO: [Synth 8-4480] The timing for the instance TestHarness/tile/dcache/data/da
 INFO: [Synth 8-4480] The timing for the instance TestHarness/tile/dcache/data/data_arrays_0_3_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance TestHarness/tile/frontend/icache/tag_array_0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:05 ; elapsed = 00:03:39 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 245 ; free virtual = 3825
+Finished Technology Mapping : Time (s): cpu = 00:03:09 ; elapsed = 00:03:45 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 509 ; free virtual = 4099
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2428,7 +2434,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:06 ; elapsed = 00:03:40 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 244 ; free virtual = 3824
+Finished IO Insertion : Time (s): cpu = 00:03:10 ; elapsed = 00:03:46 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 509 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2441,7 +2447,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:06 ; elapsed = 00:03:40 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 244 ; free virtual = 3824
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:10 ; elapsed = 00:03:46 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 509 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2453,50 +2459,51 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:07 ; elapsed = 00:03:41 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 243 ; free virtual = 3824
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:11 ; elapsed = 00:03:47 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:07 ; elapsed = 00:03:41 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 243 ; free virtual = 3824
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:11 ; elapsed = 00:03:47 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:07 ; elapsed = 00:03:41 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 244 ; free virtual = 3824
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:11 ; elapsed = 00:03:47 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:07 ; elapsed = 00:03:41 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 244 ; free virtual = 3824
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:11 ; elapsed = 00:03:47 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |SlowClock     |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |BUFG       |     1|
+|1     |SlowClock  |     1|
 |2     |CARRY4     |   308|
 |3     |DSP48E1    |     2|
 |4     |LUT1       |    59|
-|5     |LUT2       |   743|
-|6     |LUT3       |  1297|
-|7     |LUT4       |  1295|
-|8     |LUT5       |  1134|
-|9     |LUT6       |  2488|
-|10    |MUXF7      |   198|
+|5     |LUT2       |   739|
+|6     |LUT3       |  1289|
+|7     |LUT4       |  1297|
+|8     |LUT5       |  1160|
+|9     |LUT6       |  2472|
+|10    |MUXF7      |   207|
 |11    |MUXF8      |    17|
 |12    |RAM16X1D   |    20|
 |13    |RAM32M     |   111|
@@ -2504,9 +2511,9 @@ Report Cell Usage:
 |15    |RAMB36E1   |     4|
 |16    |RAMB36E1_2 |     1|
 |17    |FDCE       |     2|
-|18    |FDRE       |  2726|
+|18    |FDRE       |  2757|
 |19    |FDSE       |    21|
-|20    |IBUF       |     2|
+|20    |IBUF       |     1|
 |21    |OBUF       |     1|
 +------+-----------+------+
 
@@ -2514,8 +2521,8 @@ Report Instance Areas:
 +------+-------------------------------------+------------------------+------+
 |      |Instance                             |Module                  |Cells |
 +------+-------------------------------------+------------------------+------+
-|1     |top                                  |                        | 10431|
-|2     |  TestHarness                        |TinyLanceTop            | 10399|
+|1     |top                                  |                        | 10470|
+|2     |  TestHarness                        |TinyLanceTop            | 10439|
 |3     |    debug_1                          |TLDebugModule           |     1|
 |4     |      dmInner                        |TLDebugModuleInnerAsync |     1|
 |5     |        dmInner                      |TLDebugModuleInner      |     1|
@@ -2524,29 +2531,29 @@ Report Instance Areas:
 |8     |      AsyncResetRegVec_w2_i0         |AsyncResetRegVec_w2_i0  |     2|
 |9     |        reg_0                        |AsyncResetReg           |     1|
 |10    |        reg_1                        |AsyncResetReg_6         |     1|
-|11    |    led_1                            |LEDTL                   |     1|
-|12    |    pbus                             |PeripheryBus            |  2120|
-|13    |      coupler_from_sbus              |SimpleLazyModule_3      |   510|
+|11    |    led_1                            |LEDTL                   |    39|
+|12    |    pbus                             |PeripheryBus            |  2122|
+|13    |      coupler_from_sbus              |SimpleLazyModule_3      |   512|
 |14    |        atomics                      |TLAtomicAutomata        |   375|
-|15    |        buffer                       |TLBuffer_2              |   135|
-|16    |          Queue                      |Queue_2_4               |    71|
+|15    |        buffer                       |TLBuffer_2              |   137|
+|16    |          Queue                      |Queue_2_4               |    73|
 |17    |          Queue_1                    |Queue_3_5               |    64|
-|18    |      coupler_to_slave_named_bootrom |SimpleLazyModule_9      |   899|
-|19    |        fragmenter                   |TLFragmenter_4          |   899|
-|20    |          Repeater                   |Repeater_4              |   883|
-|21    |      coupler_to_slave_named_clint   |SimpleLazyModule_5      |   169|
-|22    |        fragmenter                   |TLFragmenter_1          |   169|
-|23    |          Repeater                   |Repeater_1              |   154|
-|24    |      coupler_to_slave_named_debug   |SimpleLazyModule_6      |   142|
-|25    |        fragmenter                   |TLFragmenter_2          |   142|
-|26    |          Repeater                   |Repeater_2              |   127|
-|27    |      coupler_to_slave_named_led     |SimpleLazyModule_8      |    77|
-|28    |        fragmenter                   |TLFragmenter_3          |    77|
-|29    |          Repeater                   |Repeater_3              |    62|
+|18    |      coupler_to_slave_named_bootrom |SimpleLazyModule_9      |   879|
+|19    |        fragmenter                   |TLFragmenter_4          |   879|
+|20    |          Repeater                   |Repeater_4              |   863|
+|21    |      coupler_to_slave_named_clint   |SimpleLazyModule_5      |   168|
+|22    |        fragmenter                   |TLFragmenter_1          |   168|
+|23    |          Repeater                   |Repeater_1              |   153|
+|24    |      coupler_to_slave_named_debug   |SimpleLazyModule_6      |   135|
+|25    |        fragmenter                   |TLFragmenter_2          |   135|
+|26    |          Repeater                   |Repeater_2              |   120|
+|27    |      coupler_to_slave_named_led     |SimpleLazyModule_8      |    76|
+|28    |        fragmenter                   |TLFragmenter_3          |    76|
+|29    |          Repeater                   |Repeater_3              |    61|
 |30    |      coupler_to_slave_named_plic    |SimpleLazyModule_4      |    91|
 |31    |        fragmenter                   |TLFragmenter            |    91|
 |32    |          Repeater                   |Repeater                |    73|
-|33    |      periphery_bus_xbar             |TLXbar_1                |   134|
+|33    |      periphery_bus_xbar             |TLXbar_1                |   163|
 |34    |      sync_xing                      |TLBuffer_3              |    98|
 |35    |        Queue                        |Queue_2_2               |    55|
 |36    |        Queue_1                      |Queue_3_3               |    43|
@@ -2586,13 +2593,13 @@ Report Instance Areas:
 |70    |      tlMasterXbar                   |TLXbar_4                |    49|
 +------+-------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:07 ; elapsed = 00:03:41 . Memory (MB): peak = 1919.758 ; gain = 725.359 ; free physical = 243 ; free virtual = 3824
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:11 ; elapsed = 00:03:47 . Memory (MB): peak = 1948.234 ; gain = 720.465 ; free physical = 506 ; free virtual = 4098
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1246 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:58 ; elapsed = 00:03:25 . Memory (MB): peak = 1923.668 ; gain = 358.551 ; free physical = 2046 ; free virtual = 5629
-Synthesis Optimization Complete : Time (s): cpu = 00:03:08 ; elapsed = 00:03:42 . Memory (MB): peak = 1923.668 ; gain = 729.270 ; free physical = 2046 ; free virtual = 5629
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:02 ; elapsed = 00:03:33 . Memory (MB): peak = 1952.145 ; gain = 359.660 ; free physical = 2315 ; free virtual = 5900
+Synthesis Optimization Complete : Time (s): cpu = 00:03:12 ; elapsed = 00:03:51 . Memory (MB): peak = 1952.145 ; gain = 724.375 ; free physical = 2315 ; free virtual = 5900
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 664 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 672 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -2602,10 +2609,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 111 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-469 Infos, 266 Warnings, 0 Critical Warnings and 0 Errors encountered.
+471 Infos, 266 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:10 ; elapsed = 00:03:45 . Memory (MB): peak = 1943.770 ; gain = 755.207 ; free physical = 2058 ; free virtual = 5642
+synth_design: Time (s): cpu = 00:03:15 ; elapsed = 00:03:54 . Memory (MB): peak = 1972.246 ; gain = 763.934 ; free physical = 2322 ; free virtual = 5906
 INFO: [Common 17-1381] The checkpoint '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/TinyLanceTestHarness.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TinyLanceTestHarness_utilization_synth.rpt -pb TinyLanceTestHarness_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.26 . Memory (MB): peak = 1967.781 ; gain = 0.000 ; free physical = 2049 ; free virtual = 5641
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 24 17:03:30 2018...
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1996.258 ; gain = 0.000 ; free physical = 2330 ; free virtual = 5911
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 25 18:22:23 2018...

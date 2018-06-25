@@ -5,7 +5,7 @@ import chisel3.util._
 import freechips.rocketchip.subsystem.BaseSubsystem
 import freechips.rocketchip.config.{Parameters, Field}
 import freechips.rocketchip.diplomacy._
-import freechips.rocketchip.regmapper.{HasRegMap, RegField}
+import freechips.rocketchip.regmapper.{HasRegMap, RegField, RegFieldDesc}
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.UIntIsOneOf
 
@@ -33,15 +33,16 @@ trait LEDTLModule extends HasRegMap {
   implicit val p: Parameters
   def params: LEDParams
 
-  val light = RegInit(false.B)
+  val w = params.beatBytes * 8
+  val light = RegInit(0.U(w.W))
 
   val base = Module(new LEDBase)
   io.led := base.io.led
-  base.io.light := light
+  base.io.light := light.orR
 
   regmap(
     0x00 -> Seq(
-      RegField(1, light)))
+      RegField(w, light, RegFieldDesc("led","led lighting", volatile=true))))
 }
 
 class LEDTL(c: LEDParams)(implicit p: Parameters)

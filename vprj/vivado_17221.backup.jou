@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 25 09:57:08 2018
+# Process ID: 17221
+# Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj
+# Command line: vivado TinyLance.xpr
+# Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.log
+# Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project TinyLance.xpr
+update_compile_order -fileset sources_1
+file mkdir /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sim_1/new/Testbench.sv w ]
+add_files -fileset sim_1 /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sim_1/new/Testbench.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source Testbench.tcl
+run all
+current_wave_config {Untitled 1}
+add_wave {{/Testbench/dut/TestHarness/led_1/base}} 
+current_wave_config {Untitled 1}
+add_wave {{/Testbench/dut/TestHarness/led_1}} 
+relaunch_sim
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+launch_simulation

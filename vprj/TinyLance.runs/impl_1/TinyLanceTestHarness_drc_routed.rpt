@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Sun Jun 24 17:06:20 2018
+| Date         : Mon Jun 25 18:23:52 2018
 | Host         : palladium running 64-bit Ubuntu 18.04 LTS
 | Command      : report_drc -file TinyLanceTestHarness_drc_routed.rpt -pb TinyLanceTestHarness_drc_routed.pb -rpx TinyLanceTestHarness_drc_routed.rpx
 | Design       : TinyLanceTestHarness

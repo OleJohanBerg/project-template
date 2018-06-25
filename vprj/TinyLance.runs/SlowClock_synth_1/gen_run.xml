@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="SlowClock_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1529831443">
+  <File Type="RDS-UTIL-PB" Name="SlowClock_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="SlowClock_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="SlowClock.vds"/>
+  <File Type="RDS-DCP" Name="SlowClock.dcp"/>
+  <File Type="PA-TCL" Name="SlowClock.tcl"/>
+  <File Type="REPORTS-TCL" Name="SlowClock_reports.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/SlowClock">
+    <File Path="$PSRCDIR/sources_1/ip/SlowClock/SlowClock.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="SlowClock"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/SlowClock">
+    <File Path="$PSRCDIR/sources_1/ip/SlowClock/SlowClock.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="SlowClock"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

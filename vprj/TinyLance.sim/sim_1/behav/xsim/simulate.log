@@ -1,0 +1,4 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+C0:          0 [x] pc=[xxxxxxxx] W[r x=xxxxxxxx][x] R[r x=xxxxxxxx] R[r x=xxxxxxxx] inst=[xxxxxxxx] DASM(xxxxxxxx)
+$finish called at time : 1060 ns : File "/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sim_1/new/Testbench.sv" Line 35

@@ -1,0 +1,511 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 17:27:13 2018
+# Process ID: 7496
+# Current directory: /home/tetsuya/fpga/rocket-chip-template/vprj
+# Command line: vivado TinyLance.xpr
+# Log file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.log
+# Journal file: /home/tetsuya/fpga/rocket-chip-template/vprj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project TinyLance.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Jun 24 17:27:38 2018] Launched synth_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
+[Sun Jun 24 17:27:38 2018] Launched impl_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-18:56:09
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696907A
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TinyLanceTestHarness' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj TinyLanceTestHarness_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tetsuya/fpga/rocket-chip-template/vsim/AsyncResetReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AsyncResetReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tetsuya/fpga/rocket-chip-template/vsim/plusarg_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module plusarg_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tetsuya/fpga/rocket-chip-template/vsim/generated-src/lance.TinyLanceTestHarness.TinyLanceConfig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TLMonitor
+INFO: [VRFC 10-311] analyzing module TLXbar
+INFO: [VRFC 10-311] analyzing module TLMonitor_1
+INFO: [VRFC 10-311] analyzing module TLSplitter
+INFO: [VRFC 10-311] analyzing module TLMonitor_2
+INFO: [VRFC 10-311] analyzing module TLFIFOFixer
+INFO: [VRFC 10-311] analyzing module TLMonitor_3
+INFO: [VRFC 10-311] analyzing module TLWidthWidget
+INFO: [VRFC 10-311] analyzing module TLMonitor_4
+INFO: [VRFC 10-311] analyzing module TLBuffer
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule
+INFO: [VRFC 10-311] analyzing module TLMonitor_5
+INFO: [VRFC 10-311] analyzing module TLBuffer_1
+INFO: [VRFC 10-311] analyzing module TLMonitor_6
+INFO: [VRFC 10-311] analyzing module TLFIFOFixer_1
+INFO: [VRFC 10-311] analyzing module TLMonitor_7
+INFO: [VRFC 10-311] analyzing module Queue
+INFO: [VRFC 10-311] analyzing module TLCacheCork
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_2
+INFO: [VRFC 10-311] analyzing module SystemBus
+INFO: [VRFC 10-311] analyzing module TLMonitor_8
+INFO: [VRFC 10-311] analyzing module TLXbar_1
+INFO: [VRFC 10-311] analyzing module TLMonitor_9
+INFO: [VRFC 10-311] analyzing module Queue_2
+INFO: [VRFC 10-311] analyzing module Queue_3
+INFO: [VRFC 10-311] analyzing module TLBuffer_2
+INFO: [VRFC 10-311] analyzing module TLMonitor_10
+INFO: [VRFC 10-311] analyzing module TLAtomicAutomata
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_3
+INFO: [VRFC 10-311] analyzing module TLMonitor_11
+INFO: [VRFC 10-311] analyzing module TLBuffer_3
+INFO: [VRFC 10-311] analyzing module TLMonitor_12
+INFO: [VRFC 10-311] analyzing module Repeater
+INFO: [VRFC 10-311] analyzing module TLFragmenter
+INFO: [VRFC 10-311] analyzing module TLMonitor_13
+INFO: [VRFC 10-311] analyzing module TLBuffer_4
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_4
+INFO: [VRFC 10-311] analyzing module TLMonitor_14
+INFO: [VRFC 10-311] analyzing module Repeater_1
+INFO: [VRFC 10-311] analyzing module TLFragmenter_1
+INFO: [VRFC 10-311] analyzing module TLMonitor_15
+INFO: [VRFC 10-311] analyzing module TLBuffer_5
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_5
+INFO: [VRFC 10-311] analyzing module TLMonitor_16
+INFO: [VRFC 10-311] analyzing module Repeater_2
+INFO: [VRFC 10-311] analyzing module TLFragmenter_2
+INFO: [VRFC 10-311] analyzing module TLMonitor_17
+INFO: [VRFC 10-311] analyzing module TLBuffer_6
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_6
+INFO: [VRFC 10-311] analyzing module TLMonitor_18
+INFO: [VRFC 10-311] analyzing module TLBuffer_7
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_7
+INFO: [VRFC 10-311] analyzing module TLMonitor_19
+INFO: [VRFC 10-311] analyzing module Repeater_3
+INFO: [VRFC 10-311] analyzing module TLFragmenter_3
+INFO: [VRFC 10-311] analyzing module TLMonitor_20
+INFO: [VRFC 10-311] analyzing module TLBuffer_8
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_8
+INFO: [VRFC 10-311] analyzing module TLMonitor_21
+INFO: [VRFC 10-311] analyzing module Repeater_4
+INFO: [VRFC 10-311] analyzing module TLFragmenter_4
+INFO: [VRFC 10-311] analyzing module TLMonitor_22
+INFO: [VRFC 10-311] analyzing module TLBuffer_9
+INFO: [VRFC 10-311] analyzing module SimpleLazyModule_9
+INFO: [VRFC 10-311] analyzing module PeripheryBus
+INFO: [VRFC 10-311] analyzing module TLMonitor_23
+INFO: [VRFC 10-311] analyzing module Queue_6
+INFO: [VRFC 10-311] analyzing module TLPLIC
+INFO: [VRFC 10-311] analyzing module TLMonitor_24
+INFO: [VRFC 10-311] analyzing module CLINT
+INFO: [VRFC 10-311] analyzing module TLMonitor_25
+INFO: [VRFC 10-311] analyzing module TLXbar_3
+INFO: [VRFC 10-311] analyzing module TLMonitor_26
+INFO: [VRFC 10-311] analyzing module AsyncResetRegVec_w32_i0
+INFO: [VRFC 10-311] analyzing module AsyncResetRegVec_w1_i0
+INFO: [VRFC 10-311] analyzing module TLDebugModuleOuter
+INFO: [VRFC 10-311] analyzing module IntSyncCrossingSource
+INFO: [VRFC 10-311] analyzing module TLMonitor_27
+INFO: [VRFC 10-311] analyzing module AsyncResetSynchronizerShiftReg_w1_d3_i0
+INFO: [VRFC 10-311] analyzing module AsyncResetSynchronizerShiftReg_w1_d4_i0
+INFO: [VRFC 10-311] analyzing module AsyncValidSync
+INFO: [VRFC 10-311] analyzing module AsyncResetSynchronizerShiftReg_w1_d1_i0
+INFO: [VRFC 10-311] analyzing module AsyncValidSync_1
+INFO: [VRFC 10-311] analyzing module AsyncValidSync_2
+INFO: [VRFC 10-311] analyzing module AsyncQueueSource
+INFO: [VRFC 10-311] analyzing module SynchronizerShiftReg_w42_d1
+INFO: [VRFC 10-311] analyzing module AsyncQueueSink
+INFO: [VRFC 10-311] analyzing module TLAsyncCrossingSource
+INFO: [VRFC 10-311] analyzing module AsyncQueueSource_1
+INFO: [VRFC 10-311] analyzing module TLDebugModuleOuterAsync
+INFO: [VRFC 10-311] analyzing module TLMonitor_28
+INFO: [VRFC 10-311] analyzing module TLMonitor_29
+INFO: [VRFC 10-311] analyzing module TLDebugModuleInner
+INFO: [VRFC 10-311] analyzing module SynchronizerShiftReg_w54_d1
+INFO: [VRFC 10-311] analyzing module AsyncQueueSink_1
+INFO: [VRFC 10-311] analyzing module AsyncQueueSource_2
+INFO: [VRFC 10-311] analyzing module TLAsyncCrossingSink
+INFO: [VRFC 10-311] analyzing module SynchronizerShiftReg_w12_d1
+INFO: [VRFC 10-311] analyzing module AsyncQueueSink_2
+INFO: [VRFC 10-311] analyzing module ResetCatchAndSync_d3
+INFO: [VRFC 10-311] analyzing module TLDebugModuleInnerAsync
+INFO: [VRFC 10-311] analyzing module TLDebugModule
+INFO: [VRFC 10-311] analyzing module TLMonitor_30
+INFO: [VRFC 10-311] analyzing module TLMonitor_31
+INFO: [VRFC 10-311] analyzing module TLXbar_4
+INFO: [VRFC 10-311] analyzing module TLXbar_5
+INFO: [VRFC 10-311] analyzing module IntXbar_1
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-311] analyzing module DCacheDataArray
+INFO: [VRFC 10-311] analyzing module Arbiter_1
+INFO: [VRFC 10-311] analyzing module PMPChecker
+INFO: [VRFC 10-311] analyzing module TLB
+INFO: [VRFC 10-311] analyzing module AMOALU
+INFO: [VRFC 10-311] analyzing module DCache
+INFO: [VRFC 10-311] analyzing module ICache
+INFO: [VRFC 10-311] analyzing module TLB_1
+INFO: [VRFC 10-311] analyzing module ShiftQueue
+INFO: [VRFC 10-311] analyzing module Frontend
+INFO: [VRFC 10-311] analyzing module ScratchpadSlavePort
+INFO: [VRFC 10-311] analyzing module Repeater_5
+INFO: [VRFC 10-311] analyzing module TLFragmenter_6
+INFO: [VRFC 10-311] analyzing module TLMonitor_32
+INFO: [VRFC 10-311] analyzing module Queue_7
+INFO: [VRFC 10-311] analyzing module TLBuffer_12
+INFO: [VRFC 10-311] analyzing module TLMonitor_33
+INFO: [VRFC 10-311] analyzing module TLBuffer_15
+INFO: [VRFC 10-311] analyzing module SynchronizerShiftReg_w1_d3
+INFO: [VRFC 10-311] analyzing module IntSyncCrossingSink
+INFO: [VRFC 10-311] analyzing module IntSyncCrossingSink_1
+INFO: [VRFC 10-311] analyzing module HellaCacheArbiter
+INFO: [VRFC 10-311] analyzing module PTW
+INFO: [VRFC 10-311] analyzing module RVCExpander
+INFO: [VRFC 10-311] analyzing module IBuf
+INFO: [VRFC 10-311] analyzing module CSRFile
+INFO: [VRFC 10-311] analyzing module BreakpointUnit
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module MulDiv
+INFO: [VRFC 10-311] analyzing module PlusArgTimeout
+INFO: [VRFC 10-311] analyzing module Rocket
+INFO: [VRFC 10-311] analyzing module RocketTile
+INFO: [VRFC 10-311] analyzing module AsyncResetRegVec_w2_i0
+INFO: [VRFC 10-311] analyzing module IntSyncCrossingSource_2
+INFO: [VRFC 10-311] analyzing module TLMonitor_34
+INFO: [VRFC 10-311] analyzing module LEDBase
+INFO: [VRFC 10-311] analyzing module LEDTL
+INFO: [VRFC 10-311] analyzing module TLMonitor_35
+INFO: [VRFC 10-311] analyzing module TLROM
+INFO: [VRFC 10-311] analyzing module TinyLanceTop
+INFO: [VRFC 10-311] analyzing module TinyLanceTestHarness
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 129df066ee004309af7f41bb061fd6c7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TinyLanceTestHarness_behav xil_defaultlib.TinyLanceTestHarness xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.plusarg_reader(FORMAT="tilelink_...
+Compiling module xil_defaultlib.TLMonitor
+Compiling module xil_defaultlib.TLXbar
+Compiling module xil_defaultlib.TLMonitor_1
+Compiling module xil_defaultlib.TLSplitter
+Compiling module xil_defaultlib.TLMonitor_2
+Compiling module xil_defaultlib.TLFIFOFixer
+Compiling module xil_defaultlib.TLMonitor_3
+Compiling module xil_defaultlib.TLWidthWidget
+Compiling module xil_defaultlib.TLMonitor_4
+Compiling module xil_defaultlib.TLBuffer
+Compiling module xil_defaultlib.SimpleLazyModule
+Compiling module xil_defaultlib.TLMonitor_5
+Compiling module xil_defaultlib.TLBuffer_1
+Compiling module xil_defaultlib.TLMonitor_6
+Compiling module xil_defaultlib.TLFIFOFixer_1
+Compiling module xil_defaultlib.TLMonitor_7
+Compiling module xil_defaultlib.Queue
+Compiling module xil_defaultlib.TLCacheCork
+Compiling module xil_defaultlib.SimpleLazyModule_2
+Compiling module xil_defaultlib.SystemBus
+Compiling module xil_defaultlib.TLMonitor_8
+Compiling module xil_defaultlib.TLXbar_1
+Compiling module xil_defaultlib.TLMonitor_9
+Compiling module xil_defaultlib.Queue_2
+Compiling module xil_defaultlib.Queue_3
+Compiling module xil_defaultlib.TLBuffer_2
+Compiling module xil_defaultlib.TLMonitor_10
+Compiling module xil_defaultlib.TLAtomicAutomata
+Compiling module xil_defaultlib.SimpleLazyModule_3
+Compiling module xil_defaultlib.TLMonitor_11
+Compiling module xil_defaultlib.TLBuffer_3
+Compiling module xil_defaultlib.TLMonitor_12
+Compiling module xil_defaultlib.Repeater
+Compiling module xil_defaultlib.TLFragmenter
+Compiling module xil_defaultlib.TLMonitor_13
+Compiling module xil_defaultlib.TLBuffer_4
+Compiling module xil_defaultlib.SimpleLazyModule_4
+Compiling module xil_defaultlib.TLMonitor_14
+Compiling module xil_defaultlib.Repeater_1
+Compiling module xil_defaultlib.TLFragmenter_1
+Compiling module xil_defaultlib.TLMonitor_15
+Compiling module xil_defaultlib.TLBuffer_5
+Compiling module xil_defaultlib.SimpleLazyModule_5
+Compiling module xil_defaultlib.TLMonitor_16
+Compiling module xil_defaultlib.Repeater_2
+Compiling module xil_defaultlib.TLFragmenter_2
+Compiling module xil_defaultlib.TLMonitor_17
+Compiling module xil_defaultlib.TLBuffer_6
+Compiling module xil_defaultlib.SimpleLazyModule_6
+Compiling module xil_defaultlib.TLMonitor_18
+Compiling module xil_defaultlib.TLBuffer_7
+Compiling module xil_defaultlib.SimpleLazyModule_7
+Compiling module xil_defaultlib.TLMonitor_19
+Compiling module xil_defaultlib.Repeater_3
+Compiling module xil_defaultlib.TLFragmenter_3
+Compiling module xil_defaultlib.TLMonitor_20
+Compiling module xil_defaultlib.TLBuffer_8
+Compiling module xil_defaultlib.SimpleLazyModule_8
+Compiling module xil_defaultlib.TLMonitor_21
+Compiling module xil_defaultlib.Repeater_4
+Compiling module xil_defaultlib.TLFragmenter_4
+Compiling module xil_defaultlib.TLMonitor_22
+Compiling module xil_defaultlib.TLBuffer_9
+Compiling module xil_defaultlib.SimpleLazyModule_9
+Compiling module xil_defaultlib.PeripheryBus
+Compiling module xil_defaultlib.TLMonitor_23
+Compiling module xil_defaultlib.Queue_6
+Compiling module xil_defaultlib.TLPLIC
+Compiling module xil_defaultlib.TLMonitor_24
+Compiling module xil_defaultlib.CLINT
+Compiling module xil_defaultlib.TLMonitor_25
+Compiling module xil_defaultlib.TLXbar_3
+Compiling module xil_defaultlib.TLMonitor_26
+Compiling module xil_defaultlib.AsyncResetReg
+Compiling module xil_defaultlib.AsyncResetRegVec_w32_i0
+Compiling module xil_defaultlib.AsyncResetRegVec_w1_i0
+Compiling module xil_defaultlib.TLDebugModuleOuter
+Compiling module xil_defaultlib.IntSyncCrossingSource
+Compiling module xil_defaultlib.TLMonitor_27
+Compiling module xil_defaultlib.AsyncResetSynchronizerShiftReg_w...
+Compiling module xil_defaultlib.AsyncResetSynchronizerShiftReg_w...
+Compiling module xil_defaultlib.AsyncValidSync
+Compiling module xil_defaultlib.AsyncResetSynchronizerShiftReg_w...
+Compiling module xil_defaultlib.AsyncValidSync_1
+Compiling module xil_defaultlib.AsyncValidSync_2
+Compiling module xil_defaultlib.AsyncQueueSource
+Compiling module xil_defaultlib.SynchronizerShiftReg_w42_d1
+Compiling module xil_defaultlib.AsyncQueueSink
+Compiling module xil_defaultlib.TLAsyncCrossingSource
+Compiling module xil_defaultlib.AsyncQueueSource_1
+Compiling module xil_defaultlib.TLDebugModuleOuterAsync
+Compiling module xil_defaultlib.TLMonitor_28
+Compiling module xil_defaultlib.TLMonitor_29
+Compiling module xil_defaultlib.TLDebugModuleInner
+Compiling module xil_defaultlib.SynchronizerShiftReg_w54_d1
+Compiling module xil_defaultlib.AsyncQueueSink_1
+Compiling module xil_defaultlib.AsyncQueueSource_2
+Compiling module xil_defaultlib.TLAsyncCrossingSink
+Compiling module xil_defaultlib.SynchronizerShiftReg_w12_d1
+Compiling module xil_defaultlib.AsyncQueueSink_2
+Compiling module xil_defaultlib.ResetCatchAndSync_d3
+Compiling module xil_defaultlib.TLDebugModuleInnerAsync
+Compiling module xil_defaultlib.TLDebugModule
+Compiling module xil_defaultlib.TLMonitor_30
+Compiling module xil_defaultlib.TLMonitor_31
+Compiling module xil_defaultlib.TLXbar_4
+Compiling module xil_defaultlib.TLXbar_5
+Compiling module xil_defaultlib.IntXbar_1
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.DCacheDataArray
+Compiling module xil_defaultlib.Arbiter_1
+Compiling module xil_defaultlib.PMPChecker
+Compiling module xil_defaultlib.TLB
+Compiling module xil_defaultlib.AMOALU
+Compiling module xil_defaultlib.DCache
+Compiling module xil_defaultlib.ICache
+Compiling module xil_defaultlib.TLB_1
+Compiling module xil_defaultlib.ShiftQueue
+Compiling module xil_defaultlib.Frontend
+Compiling module xil_defaultlib.ScratchpadSlavePort
+Compiling module xil_defaultlib.Repeater_5
+Compiling module xil_defaultlib.TLFragmenter_6
+Compiling module xil_defaultlib.TLMonitor_32
+Compiling module xil_defaultlib.Queue_7
+Compiling module xil_defaultlib.TLBuffer_12
+Compiling module xil_defaultlib.TLMonitor_33
+Compiling module xil_defaultlib.TLBuffer_15
+Compiling module xil_defaultlib.SynchronizerShiftReg_w1_d3
+Compiling module xil_defaultlib.IntSyncCrossingSink
+Compiling module xil_defaultlib.IntSyncCrossingSink_1
+Compiling module xil_defaultlib.HellaCacheArbiter
+Compiling module xil_defaultlib.PTW
+Compiling module xil_defaultlib.RVCExpander
+Compiling module xil_defaultlib.IBuf
+Compiling module xil_defaultlib.CSRFile
+Compiling module xil_defaultlib.BreakpointUnit
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MulDiv
+Compiling module xil_defaultlib.plusarg_reader(FORMAT="max_core_...
+Compiling module xil_defaultlib.PlusArgTimeout
+Compiling module xil_defaultlib.Rocket
+Compiling module xil_defaultlib.RocketTile
+Compiling module xil_defaultlib.AsyncResetRegVec_w2_i0
+Compiling module xil_defaultlib.IntSyncCrossingSource_2
+Compiling module xil_defaultlib.TLMonitor_34
+Compiling module xil_defaultlib.LEDBase
+Compiling module xil_defaultlib.LEDTL
+Compiling module xil_defaultlib.TLMonitor_35
+Compiling module xil_defaultlib.TLROM
+Compiling module xil_defaultlib.TinyLanceTop
+Compiling module xil_defaultlib.TinyLanceTestHarness
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TinyLanceTestHarness_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim/xsim.dir/TinyLanceTestHarness_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim/xsim.dir/TinyLanceTestHarness_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Jun 24 17:35:50 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2018.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 24 17:35:50 2018...
+run_program: Time (s): cpu = 00:00:27 ; elapsed = 00:00:11 . Memory (MB): peak = 6722.090 ; gain = 0.000 ; free physical = 2362 ; free virtual = 6470
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TinyLanceTestHarness_behav -key {Behavioral:sim_1:Functional:TinyLanceTestHarness} -tclbatch {TinyLanceTestHarness.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source TinyLanceTestHarness.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TinyLanceTestHarness_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:32 ; elapsed = 00:00:16 . Memory (MB): peak = 6813.906 ; gain = 91.816 ; free physical = 2275 ; free virtual = 6397
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Jun 24 17:44:35 2018] Launched synth_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
+[Sun Jun 24 17:44:35 2018] Launched impl_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name SlowClock
+set_property -dict [list CONFIG.Component_Name {SlowClock} CONFIG.PRIMARY_PORT {clk_system} CONFIG.CLK_OUT1_PORT {clk_slow} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.000} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.CLKOUT1_JITTER {181.828} CONFIG.CLKOUT1_PHASE_ERROR {104.359}] [get_ips SlowClock]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'SlowClock' to 'SlowClock' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.srcs/sources_1/ip/SlowClock/SlowClock.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'SlowClock'...
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SlowClock'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'SlowClock'...
+[Sun Jun 24 18:10:43 2018] Launched SlowClock_synth_1, synth_1...
+Run output will be captured here:
+SlowClock_synth_1: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/SlowClock_synth_1/runme.log
+synth_1: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
+[Sun Jun 24 18:10:43 2018] Launched impl_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Jun 24 18:34:08 2018] Launched synth_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
+[Sun Jun 24 18:34:08 2018] Launched impl_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Jun 24 19:01:32 2018] Launched synth_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/synth_1/runme.log
+[Sun Jun 24 19:01:32 2018] Launched impl_1...
+Run output will be captured here: /home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/tetsuya/fpga/rocket-chip-template/vprj/TinyLance.runs/impl_1/TinyLanceTestHarness.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 7253.102 ; gain = 0.000 ; free physical = 2589 ; free virtual = 5957
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 24 19:59:05 2018...
