@@ -1,4 +1,4 @@
-# フォーク元の和訳や解説をするフォーク
+# RISC-V Projectのテンプレートの和訳や解説をするフォーク
 
 ここでは、[フォーク元](https://github.com/ucb-bar/project-template) の和訳や解説をします。
 
@@ -239,12 +239,12 @@ TestHarness がデフォルトの ExampleTop の代わりに ExampleTopWithPWM
     make CONFIG=PWMConfig
     ./simulator-example-PWMConfig ../tests/pwm.riscv
 
-## Adding a DMA port
+## DMAポートの追加
 
-In the example above, we gave allowed the processor to communicate with the
-peripheral through MMIO. However, for IO devices (like a disk or network
-driver), we may want to have the device write directly to the coherent
-memory system instead. To add a device like that, you would do the following.
+上記の例の中で、プロセッサが、MMIOを通して周辺機器との通信を許可しました。しかし、
+IO機器(ディスクやネットワークドライバのようなもの)には、デバイスに対して、
+メモリの一貫性システム(coherent memory system)を通さずに直接書き込みをしたくなります。
+このようなデバイスを追加するには、以下のようにします。
 
 ```scala
     class DMADevice(implicit p: Parameters) extends LazyModule {
@@ -277,14 +277,13 @@ memory system instead. To add a device like that, you would do the following.
     }
 ```
 
-The `ExtBundle` contains the signals we connect off-chip that we get data from.
-The DMADevice also has a Tilelink client port that we connect into the L1-L2
-crossbar through the front-side buffer (fsb). The sourceId variable given in
-the TLClientNode instantiation determines the range of ids that can be used
-in acquire messages from this device. Since we specified [0, 1) as our range,
-only the ID 0 can be used.
+`ExtBundle` は、チップ外のデータを取得したいデバイスと接続する信号線を含みます。
+また、DMAデバイスは、TileLinkのクライアント用のポートを持ち、そのポートは、
+front-side buffer (fsb)を通して、L1-L2 クロスバーに接続されます。
+TLClientNodeのインスタンス化で与えられるsouceId変数は、このデバイスからの要求メッセージで
+使われるidの範囲を決定します。ここでは、[0, 1)を範囲として指定したので、ID 0だけが使われます。
 
-## Adding a RoCC accelerator
+## RoCCアクセラレータの追加
 
 Besides peripheral devices, a RocketChip-based SoC can also be customized with
 coprocessor accelerators. Each core can have up to four accelerators that
