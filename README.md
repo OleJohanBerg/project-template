@@ -285,26 +285,24 @@ TLClientNodeのインスタンス化で与えられるsouceId変数は、この�
 
 ## RoCCアクセラレータの追加
 
-Besides peripheral devices, a RocketChip-based SoC can also be customized with
-coprocessor accelerators. Each core can have up to four accelerators that
-are controlled by custom instructions and share resources with the CPU.
+周辺機器に加えて、RocketChipベースのSoCは、コプロセッサ型のアクセラレータで
+カスタマイズできます。各コアで4つのアクセラレータを持つ事ができ、それぞれが
+カスタムの命令で制御され、CPUとリソースを共有します。
 
-### A RoCC instruction
+### Rocc命令
 
-Coprocessor instructions have the following form.
+コプロセッサへの命令は以下の書式です。
 
     customX rd, rs1, rs2, funct
 
-The X will be a number 0-3, and determines the opcode of the instruction,
-which controls which accelerator an instruction will be routed to.
-The `rd`, `rs1`, and `rs2` fields are the register numbers of the destination
-register and two source registers. The `funct` field is a 7-bit integer that
-the accelerator can use to distinguish different instructions from each other.
+ここで、Xは、0-3 の番号で、どのアクセラレータに命令を送るのかを制御するオペコードです。
+`rd`、 `rs1` と `rs2` フィールドは、宛先のレジスタと、2つの元のレジスタの番号です。
+`funct` は7ビットの整数で、アクセラレータが、命令の種別を判別するために使われます。
 
-### Creating an accelerator
+### アクセラレータの作成
 
-RoCC accelerators are lazy modules that extend the LazyRoCC class.
-Their implementation should extends the LazyRoCCModule class.
+RoCCアクセラレータはLazyモジュールであり、 LazyRoCCクラスを継承します。
+これらの実装は、LazyRoCCModuleを継承すべきです。
 
 ```scala
     class CustomAccelerator(implicit p: Parameters) extends LazyRoCC {
@@ -329,29 +327,28 @@ Their implementation should extends the LazyRoCCModule class.
     }
 ```
 
-The LazyRoCC class contains two TLOutputNode instances, `atlNode` and `tlNode`.
-The former connects into a tile-local arbiter along with the backside of the
-L1 instruction cache. The latter connects directly to the L1-L2 crossbar.
-The corresponding Tilelink ports in the module implementation's IO bundle
-are `atl` and `tl`, respectively.
+LazyRoCC クラスは、2つの TLOutputNode のインスタンスを含み、 それらは、
+`atlNode` と `tlNode` となっています。
+前者は、L1命令キャッシュのバックサイドと協調して、tile-local arbiterと接続されます。
+後者は、L1-L2 クロスバーに直接接続されます。
+モジュールの実装のIOバンドルの中の、対応するTileLinkのポートは、それぞれ、`atl` と `tl` です。
 
-The other interfaces available to the accelerator are `mem`, which provides
-access to the L1 cache; `ptw` which provides access to the page-table walker;
-the `busy` signal, which indicates when the accelerator is still handling an
-instruction; and the `interrupt` signal, which can be used to interrupt the CPU.
+アクセラレータが利用できるその他のインターフェイスは次の通りです。 `mem` は、
+L1キャッシュへのアクセスを提供します; `ptw` は、page-table walker へのアクセスを
+提供します; `busy` シグナルは、アクセラレータがまだ命令を取り扱っている状態を示します;
+`interrupt` は、CPUに割り込みするのに使われます。
 
-Look at the examples in rocket-chip/src/main/scala/tile/LazyRocc.scala for
-detailed information on the different IOs.
+他のIOに関する詳細情報は、rocket-chip/src/main/scala/tile/LazyRocc.scala を見て下さい。
 
-### Adding RoCC accelerator to Config
+### ConfigへのRoCCアクセラレータの追加
 
-RoCC accelerators can be added to a core by overriding the BuildRoCC parameter
-in the configuration. This takes a sequence of RoccParameters objects, one
-for each accelerator you wish to add. The two required fields for this
-object are `opcodes` which determines which custom opcodes get routed to the
-accelerator, and `generator` which specifies how to build the accelerator itself.
-For instance, if we wanted to add the previously defined accelerator and
-route custom0 and custom1 instructions to it, we could do the following.
+RoCCアクセラレータをコアに追加するには、構築設定のBuildRoCCパラメータをオーバーライドします。
+これは、RoccParameterのオブジェクトのシーケンスを受け取ります。このパラメータオブジェクトは
+追加する各アクセラレータに付き一つです。また、このオブジェクトには2つのフィールドが要求されており、
+それは、どのアクセラレータに転送するかを決定する `opcodes` と、どのようにアクセラレータを
+ビルドするのかを指定する `generator` のフィールドです。
+例えば、 前述で定義したアクセラレータを追加し、custom0 と custom1 命令を転送したいなら、
+以下のようにできます。
 
 ```scala
     class WithCustomAccelerator extends Config((site, here, up) => {
