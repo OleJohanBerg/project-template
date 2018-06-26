@@ -364,23 +364,22 @@ RoCCアクセラレータをコアに追加するには、構築設定のBuildRo
       new WithCustomAccelerator ++ new BaseConfig)
 ```
 
-## Adding a submodule
+## サブモジュールの追加
 
-While developing, you want to include Chisel code in a submodule so that it
-can be shared by different projects. To add a submodule to the project
-template, make sure that your project is organized as follows.
+開発の間に、Chiselのコードをサブモジュールの中にまとめて、異なるプロジェクトで共有
+したくなるかもしれません。サブモジュールを、このプロジェクト・テンプレートに追加する
+には、サブモジュールのプロジェクトを次のように構成します。
 
     yourproject/
         build.sbt
         src/main/scala/
             YourFile.scala
 
-Put this in a git repository and make it accessible. Then add it as a submodule
-to the project template.
+これをgitリポジトリに加えて、外部からアクセス可能な状態にします。そして、gitリポジトリを
+このプロジェクトテンプレートに、サブモジュールとして追加します。
 
     git submodule add https://git-repository.com/yourproject.git
 
-Then add `yourproject` to the `EXTRA_PACKAGES` variable in the Makefrag.
-Now your project will be bundled into a jar file alongside the rocket-chip
-and testchipip libraries. You can then import the classes defined in the
-submodule in a new project.
+そして次に、Makefragファイルの `EXTRA_PACKAGES` 変数に `yourproject` を追加します。
+これで、yourproject は、rocket-chipとtestchipipライブラリと一緒にjarファイルに一纏めに
+されます。これで、サブモジュールで定義されたクラスを新しいプロジェクトで、importできます。
