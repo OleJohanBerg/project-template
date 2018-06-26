@@ -1,7 +1,11 @@
-# RISC-V Projectのテンプレート(及び和訳、解説)
+# フォーク元の和訳や解説をするフォーク
 
-本リポジトリは、初心者が、RISC-Vをカスタマイズしようとするプロジェクトのための、テンプレートです。
-これは、あなたが、Chisel HDLとRocketChip SoC generatorを利用して、メモリ・マップドIO周辺機器や、DMAや独自アクセラレータを追加したRISC-V SoCを生成するのを手助けします。
+ここでは、[フォーク元](https://github.com/ucb-bar/project-template) の和訳や解説をします。
+
+# RISC-V Projectのテンプレート
+
+本リポジトリは、RISC-Vをカスタマイズするプロジェクト用の、初心者向けテンプレートです。
+これは、Chisel HDLとRocketChip SoC generatorを利用して、メモリ・マップドIO周辺機器、DMAや独自アクセラレータを追加したRISC-V SoCを生成するのに役立ちます。
 
 ## はじめに
 
@@ -13,68 +17,66 @@
     cd project-template
     git submodule update --init --recursive
 
-### Building the tools
+### ツールのビルド
 
-The tools repo contains the cross-compiler toolchain, frontend server, and
-proxy kernel, which you will need in order to compile code to RISC-V
-instructions and run them on your design. There are detailed instructions at
-https://github.com/riscv/riscv-tools. But to get a basic installation, just
-the following steps are necessary.
+toolsリポジトリに含まれるものは、クロス・コンパイラ、フロントエンド・サーバ、プロキシ・カーネルといった、コードをRISC-Vの命令にコンパイルし、設計したSoC上で実行するのに必要なものが含まれます。詳細は、 https://github.com/riscv/riscv-tools にあります。
+基本的なインストールをする場合は、単に以下のステップが必要なだけです。
 
-    # You may want to add the following two lines to your shell profile
+    # シェルのプロファイルに、以下の2行を追加してもよい。
     export RISCV=/path/to/install/dir
     export PATH=$RISCV/bin:$PATH
 
     cd rocket-chip/riscv-tools
     ./build.sh
 
-### Compiling and running the Verilator simulation
+### コンパイルと、Verilatorのシミュレーションの実行
 
-To compile the example design, run make in the "verisim" directory.
-This will elaborate the DefaultExampleConfig in the example project.
+実施例の設計をコンパイルするには、"verisim" ディレクトリで make を実行します。
+これによって、実施例のプロジェクトの DefaultExampleConfig が、エラボレートされます。
 
-An executable called simulator-example-DefaultExampleConfig will be produced.
-You can then use this executable to run any compatible RV64 code. For instance,
-to run one of the riscv-tools assembly tests.
+simulator-example-DefaultExampleConfig という名前の実行ファイルが生成されます。
+この実行ファイルを使って、どんなRV64互換のコードを実行する事も可能です。例えば、 
+以下のようにriscv-tools のアセンブリテストの一つを実行できます。
 
     ./simulator-example-DefaultExampleConfig $RISCV/riscv64-unknown-elf/share/riscv-tests/isa/rv64ui-p-simple
 
-If you later create your own project, you can use environment variables to
-build an alternate configuration.
+もし、後ほど、あなた独自のプロジェクトを作成した場合、環境変数を使って、別の構築設定でビルドできます。
 
     make PROJECT=yourproject CONFIG=YourConfig
     ./simulator-yourproject-YourConfig ...
 
-## Submodules and Subdirectories
+## サブモジュールとサブディレクトリ
 
-The submodules and subdirectories for the project template are organized as
-follows.
+このプロジェクト・テンプレートのサブモジュールとサブディレクトリの構成は以下の通りです。
 
- * rocket-chip - contains code for the RocketChip generator and Chisel HDL
- * testchipip - contains the serial adapter, block device, and associated verilog and C++ code
- * verisim - directory in which Verilator simulations are compiled and run
- * vsim - directory in which Synopsys VCS simulations are compiled and run
- * bootrom - sources for the first-stage bootloader included in the Boot ROM
- * src/main/scala - scala source files for your project go here
+ * rocket-chip - RocketChipジェネレータとChisel HDLのコードを含みます。
+ * testchipip - シリアル・アダプタ、ブロック・デバイスと、関連するVerilogとC++のコードを含みます。
+ * verisim - Verilatorシミュレーションのコンパイルと実行用のディレクトリ
+ * vsim - Synopsys VCSシミュレーションのコンパイルと実行用のディレクトリ
+ * bootrom - Boot ROMに含まれる、第一段階ブート・ローダーのソースコード
+ * src/main/scala - あなた独自のScalaソースコードをここに追加します。
 
-## Using the block device
+## ブロック・デバイスの使用
 
-The default example project just provides the Rocket coreplex, memory, and
-serial line. But testchipip also provides a simulated block device that can
-be used for non-volatile storage. You can build a simulator including the
-block device using the blkdev package.
+デフォルトの実施例のプロジェクトは、Rocketコア構造体(coreplex)、メモリとシリアル・ラインのみを
+提供します。ですが、testchipipでは、他に、不揮発性ストレージに使用できるのブロック・デバイスの
+シミュレーションを提供しています。blkdevパッケージを使用して、ブロック・デバイスを含むシミュレータを
+ビルドできます。
 
     make CONFIG=SimBlockDeviceConfig
     ./simulator-example-SimBlockDeviceConfig +blkdev=block-device.img ...
 
-By passing the +blkdev argument on the simulator command line, you can allow
-the RTL simulation to read and write from a file. Take a look at tests/blkdev.c
-for an example of how Rocket can program the block device controller.
++blkdev引数をシミュレータのコマンドラインに渡すと、RTLシミュレーションで、ファイルから
+読み書きを実行できます。tests/blkdev.c を見れば、Rocketでブロック・デバイス用コントローラを
+プログラムできるのかの例を見れます。
 
 ## MMIO周辺機器の追加
 
-RocketChip向けに、独自のメモリ・マップド・IO機器を作成して、Socの設計に追加する事ができます。
-最も簡単な作成方法は、TileLink向けの周辺機器を作成し、 TLRegisterRouter を使う事です。 TLRegisterRouter は TileLink プロトコルを扱うための詳細を抽象化し、メモリ・マップされたレジスタのための、簡単なインターフェイスを提供します。 RegisterRouterベースの周辺機器を作成するには、コンフィグレーションの設定のパラメータCaseクラスを指定し、追加のトップレベルのポートのtraitのバンドルをwithで指定し、実際のRTLを含むモジュールの実装を指定します。
+RocketChip向けに、独自のメモリ・マップド・IO機器を作成して、あなた独自のSocの設計に追加する事ができます。
+最も簡単な作成方法は、TileLink向けの周辺機器を作成し、 TLRegisterRouter を使う方法です。 TLRegisterRouter は 
+TileLink プロトコルを扱うための詳細を抽象化し、メモリ・マップされたレジスタを作成するのに簡単なインターフェイスを提供します。 
+RegisterRouterベースの周辺機器を作成するには、まずコンフィグレーションの設定パラメータのcaseクラスを作成します。
+次にトップレベル・モジュールに追加するポートのtraitバンドルクラスを作成します。最後に実際のRTLを含むモジュールの実装を作成します。
 
 ```scala
     case class PWMParams(address: BigInt, beatBytes: Int)
@@ -93,7 +95,7 @@ RocketChip向けに、独自のメモリ・マップド・IO機器を作成し�
       val duty = Reg(UInt(w.W))
       val enable = RegInit(false.B)
 
-      // ... Use the registers to drive io.pwmout ...
+      // レジスタの値を使って io.pwmout を制御する...
 
       regmap(
         0x00 -> Seq(
@@ -105,10 +107,9 @@ RocketChip向けに、独自のメモリ・マップド・IO機器を作成し�
     }
 ```
 
-これらのクラスが出来たら、TLRegisterRouter を継承し、TLRegisterRouterに引数を渡す事により、周辺機器を構築できます。
-最初の引数は、RegisterRouterがグローバルアドレスマップの中のどこに配置すればよいかと、デバイス・ツリーのエントリに追加する時の情報です。
-二番目の引数は、IOバンドルのコンストラクタ(追加したいバンドルtraitでTLRegBundleを拡張します)です。
-最後の引数は、モジュールのコンストラクタ(追加したいモジュールtraitでTLRegModuleを拡張します)です。
+これらのクラスが出来たら、TLRegisterRouter を継承した周辺機器クラスを構築できます。
+TLRegisterRouterのコンストラクタには適切な引数を渡します。
+最初の引数のセットは、RegisterRouterがグローバル・アドレスマップの中のどこに配置すればよいかと、デバイス・ツリーのエントリに追加する時の情報です。二番目の引数は、IOバンドルのコンストラクタ(追加したいバンドルtraitでTLRegBundleを拡張します)です。最後の引数は、モジュールのコンストラクタ(追加したいモジュールtraitでTLRegModuleを拡張します)です。
 
 ```scala
     class PWMTL(c: PWMParams)(implicit p: Parameters)
@@ -119,17 +120,15 @@ RocketChip向けに、独自のメモリ・マップド・IO機器を作成し�
           new TLRegModule(c, _, _) with PWMTLModule)
 ```
 
-コメント付きの全部のモジュールのコードは src/main/scala/example/PWM.scala にあります。
+コメント付きの完全なモジュールのコードは src/main/scala/example/PWM.scala にあります。
 
-After creating the module, we need to hook it up to our SoC. Rocketchip
-accomplishes this using the [cake pattern](http://www.cakesolutions.net/teamblogs/2011/12/19/cake-pattern-in-depth).
-This basically involves placing code inside traits. In the RocketChip cake,
-there are two kinds of traits: a LazyModule trait and a module implementation
-trait.
+モジュールを作成したら、SoCに接続する必要があります。Rocketchipでは、接続に [cake pattern](http://www.cakesolutions.net/teamblogs/2011/12/19/cake-pattern-in-depth) を使います。
+cake patternでは基本的に、traitの中にコード埋め込む事が必要になります。
+RocketChipのcake patternでは、2種類のtraitがあります: LazyModule traitと、モジュールの実装のtraitです。
 
-The LazyModule trait runs setup code that must execute before all the hardware
-gets elaborated. For a simple memory-mapped peripheral, this just involves
-connecting the peripheral's TileLink node to the MMIO crossbar.
+LazyModule traitは、全てのハードウェアがエラボレートされる前に実行されなければならない
+セット・アップのコードを実行します。単純なメモリ・マップド周辺機器に対しては、
+周辺機器のTileLink向けノードとMMIOクロスバーを接続するだけです。
 
 ```scala
     trait HasPeripheryPWM extends HasSystemNetworks {
@@ -145,15 +144,16 @@ connecting the peripheral's TileLink node to the MMIO crossbar.
     }
 ```
 
-Note that the PWMTL class we created from the register router is itself a
-LazyModule. Register routers have a TileLike node simply named "node", which
-we can hook up to the RocketChip peripheryBus. This will automatically add
-address map and device tree entries for the peripheral.
+注意すべき点は、register routerのクラスから作成したPWMTLクラスは、
+それ自身では、LazyModuleである点です。Register routerは、単に "node" 
+と名付けられたTileLinke nodeを持っていて、nodeは、RocketChipの周辺機器用バス
+(peripheryBus)に接続できます。これによって、周辺機器のためのアドレスマップと
+デバイスツリーのエントリが、自動的に追加されます。
 
-The module implementation trait is where we instantiate our PWM module and
-connect it to the rest of the SoC. Since this module has an extra `pwmout`
-output, we declare that in this trait, using Chisel's multi-IO
-functionality. We then connect the PWMTL's pwmout to the pwmout we declared.
+モジュールを実装したtraitは、独自のPWMモジュールをインスタンス化する場所であり、
+SoCの残りの部分に接続します。接続用に、このモジュールは、`pwmout`という特別なOutputを持ち、
+このtraitの中でそれを宣言します。宣言には、Chiselの マルチIO機能を使用します。
+次に、PWMTLのpwmoutと、ここで宣言したpwmoutを接続します。
 
 ```scala
     trait HasPeripheryPWMModuleImp extends LazyMultiIOModuleImp {
@@ -166,8 +166,8 @@ functionality. We then connect the PWMTL's pwmout to the pwmout we declared.
     }
 ```
 
-Now we want to mix our traits into the system as a whole. This code is from
-src/main/scala/example/Top.scala.
+では、次にこのtraitを、全体のシステムの中に入れましょう。以下のコードは、
+src/main/scala/example/Top.scala から取ったものです。
 
 ```scala
     class ExampleTopWithPWM(q: Parameters) extends ExampleTop(q)
@@ -180,17 +180,17 @@ src/main/scala/example/Top.scala.
       extends ExampleTopModule(l) with HasPeripheryPWMModuleImp
 ```
 
-Just as we need separate traits for LazyModule and module implementation, we
-need two classes to build the system. The ExampleTop classes already have the
-basic peripherals included for us, so we will just extend those.
+必要なのは、単純に LazyModule と モジュールの実装を分離する事です。システムをビルドするには、
+2つのクラスが必要です。ExampleTop関連のクラスは、すでに必要な周辺機器を含んでいるので、これらを
+単に継承するだけです。
 
-The ExampleTop class includes the pre-elaboration code and also a lazy val to
-produce the module implementation (hence LazyModule). The ExampleTopModule
-class is the actual RTL that gets synthesized.
+ExampleTop関連のクラスに含まれるのは、エラボレーション前のコードと、
+(LazyModuleによる)モジュールの実装のためのlazy変数です。
+ExampleTopModuleクラスが、合成される実際のRTLです。
 
-Finally, we need to add a configuration class in
-src/main/scala/example/Configs.scala that tells the TestHarness to instantiate
-ExampleTopWithPWM instead of the default ExampleTop.
+最後に、src/main/scala/example/Configs.scala にある構成設定用クラスに追加し、 
+TestHarness がデフォルトの ExampleTop の代わりに ExampleTopWithPWM 
+をインスタンス化するように指示します。
 
 ```scala
     class WithPWM extends Config((site, here, up) => {
@@ -201,7 +201,7 @@ ExampleTopWithPWM instead of the default ExampleTop.
     class PWMConfig extends Config(new WithPWM ++ new BaseExampleConfig)
 ```
 
-Now we can test that the PWM is working. The test program is in tests/pwm.c
+ここまでで、PWMが動作するかテスト出来るようになりました。テストプログラムは tests/pwm.c にあります。
 
 ```c
     #define PWM_PERIOD 0x2000
@@ -228,13 +228,12 @@ Now we can test that the PWM is working. The test program is in tests/pwm.c
     }
 ```
 
-This just writes out to the registers we defined earlier. The base of the
-module's MMIO region is at 0x2000. This will be printed out in the address
-map portion when you generated the verilog code.
+これは、前述で定義したレジスタに値を書き出しているだけです。モジュールのMMIOのベースアドレスは、0x2000です。
+この値は、Verilogコードを生成する時に、アドレス・マップの部分で表示されます。
 
-Compiling this program with make produces a `pwm.riscv` executable.
+このプログラムを、`pwm.riscv`の実行ファイルとなるようにコンパイルします。
 
-Now with all of that done, we can go ahead and run our simulation.
+これで、全てが完了しました。では、シミュレーションを実行しましょう。
 
     cd verisim
     make CONFIG=PWMConfig
