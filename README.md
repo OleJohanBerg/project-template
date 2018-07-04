@@ -51,9 +51,9 @@ simulator-example-DefaultExampleConfig という名前の実行ファイルが�
 
  * rocket-chip - RocketChipジェネレータとChisel HDLのコードを含みます。
  * testchipip - シリアル・アダプタ、ブロック・デバイスと、関連するVerilogとC++のコードを含みます。
+ * testchipip/bootrom - Boot ROMに含まれる、第一段階ブート・ローダーのソースコード
  * verisim - Verilatorシミュレーションのコンパイルと実行用のディレクトリ
  * vsim - Synopsys VCSシミュレーションのコンパイルと実行用のディレクトリ
- * bootrom - Boot ROMに含まれる、第一段階ブート・ローダーのソースコード
  * src/main/scala - あなた独自のScalaソースコードをここに追加します。
 
 ## ブロック・デバイスの使用
