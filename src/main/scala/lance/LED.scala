@@ -9,7 +9,10 @@ import freechips.rocketchip.regmapper.{HasRegMap, RegField}
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.UIntIsOneOf
 
-case class LEDParams(address: BigInt, beatBytes: Int)
+case class LEDParams(
+  address: BigInt = 0x10012000,
+  beatBytes: Int = 4)
+case object LEDParams extends Field[LEDParams]
 
 /** LED点灯制御モジュール
   */
@@ -52,13 +55,12 @@ class LEDTL(c: LEDParams)(implicit p: Parameters)
       new TLRegModule(c, _, _) with LEDTLModule)
 
 trait HasPeripheryLED { this: BaseSubsystem =>
-  implicit val p: Parameters
+  private val params = p(LEDParams)
 
-  private val address = 0x10012000
   private val portName = "led"
 
   val led = LazyModule(new LEDTL(
-    LEDParams(address, pbus.beatBytes))(p))
+    LEDParams(params.address, pbus.beatBytes))(p))
 
   pbus.toVariableWidthSlave(Some(portName)) { led.node }
 }

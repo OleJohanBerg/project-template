@@ -13,6 +13,11 @@ class WithBootROM extends Config((site, here, up) => {
     contentFileName = s"./testchipip/bootrom/bootrom.rv${site(XLen)}.img")
 })
 
+class WithLED extends Config((site, here, up) => {
+  case LEDParams => LEDParams(
+    address = 0x10012000)
+})
+
 object ConfigValName {
   implicit val valName = ValName("TestHarness")
 }
@@ -24,10 +29,8 @@ class WithTinyLanceTop extends Config((site, here, up) => {
   }
 })
 
-class PicoRocketConfig extends Config(
+class TinyLanceConfig extends Config(
+  new WithTinyLanceTop ++
+  new WithLED ++
   new WithBootROM ++
   new freechips.rocketchip.system.TinyConfig)
-
-class TinyLanceConfig extends Config(
-  new WithTinyLanceTop ++ new PicoRocketConfig)
-
