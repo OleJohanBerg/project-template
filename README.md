@@ -1,7 +1,7 @@
-# RISC-V Projectのテンプレート(及び和訳、解説)
+# RISC-V Project template (and Japanese translation, commentary)
 
-本リポジトリは、初心者が、RISC-Vをカスタマイズしようとするプロジェクトのための、テンプレートです。
-これは、あなたが、Chisel HDLとRocketChip SoC generatorを利用して、メモリ・マップドIO周辺機器や、DMAや独自アクセラレータを追加したRISC-V SoCを生成するのを手助けします。
+This repository is a template for projects where beginners want to customize RISC-V. This helps you leverage Chisel HDL and RocketChip SoC generators to generate memory-mapped IO peripherals and RISC-V SoCs with additional DMA and proprietary accelerators.
+
 
 ## はじめに
 
@@ -71,10 +71,13 @@ By passing the +blkdev argument on the simulator command line, you can allow
 the RTL simulation to read and write from a file. Take a look at tests/blkdev.c
 for an example of how Rocket can program the block device controller.
 
-## MMIO周辺機器の追加
+## Addition of MMIO peripherals
 
-RocketChip向けに、独自のメモリ・マップド・IO機器を作成して、Socの設計に追加する事ができます。
-最も簡単な作成方法は、TileLink向けの周辺機器を作成し、 TLRegisterRouter を使う事です。 TLRegisterRouter は TileLink プロトコルを扱うための詳細を抽象化し、メモリ・マップされたレジスタのための、簡単なインターフェイスを提供します。 RegisterRouterベースの周辺機器を作成するには、コンフィグレーションの設定のパラメータCaseクラスを指定し、追加のトップレベルのポートのtraitのバンドルをwithで指定し、実際のRTLを含むモジュールの実装を指定します。
+
+You can create your own memory-mapped IO equipment for RocketChip and add it to your Soc design.
+The easiest way to create one is to create a peripheral for TileLink and use TLRegisterRouter. The TLRegisterRouter abstracts the details for working with the TileLink protocol and provides a simple interface for memory-mapped registers. To create a RegisterRouter-based peripheral, specify the parameter Case class in the configuration settings, specify a bundle of traits for additional top-level ports with with, and specify the implementation of the module containing the actual RTL. I will.
+
+
 
 ```scala
     case class PWMParams(address: BigInt, beatBytes: Int)
